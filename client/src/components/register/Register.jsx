@@ -1,3 +1,7 @@
+//TODO: change colors
+
+import { Link } from "react-router";
+
 export default function Register() {
     return (
     <>
@@ -32,7 +36,7 @@ export default function Register() {
                 <button type="submit" className="signupbtn">Sign Up</button>
              </div>
 
-             <p className="signInHere">You already have an account? <a href="/auth/login">Sign in here!</a></p>
+             <p className="signInHere">You already have an account? <Link to="/login">Sign in here!</Link></p>
              </div>
         </form>
     </div>

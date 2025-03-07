@@ -1,4 +1,6 @@
-//TODO: Images, colors
+//TODO: to change Images, colors
+
+import { Link } from "react-router";
 
 export default function Login() {
     return (
@@ -18,7 +20,7 @@ export default function Login() {
     
                 <button type="submit">Login</button>
 
-                <p className="registerHere">You don't have an account yet? <a href="/auth/register">Register here!</a></p>
+                <p className="registerHere">You don't have an account yet? <Link to="/register">Register here!</Link></p>
            </div>
         </form>
     </div>

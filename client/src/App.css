@@ -1,3 +1,100 @@
+@import "tailwindcss";
+
+
+/*! Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1a98ce;
+  padding: 20px;
+}
+
+.app-header nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.app-header nav li {
+  list-style: none outside;
+  padding: 0px 8px;
+}
+
+.app-header nav a {
+  font-size: 22px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  
+} 
+
+
+
+.guest {
+  display: flex;
+  gap: 15px;
+}
+
+.user {
+  display: flex;
+  gap: 60px;
+}
+
+.home, .profile {
+ display: flex;
+ gap: 15px;
+}
+
+.app-logo a {
+  font-size: 30px;
+  text-decoration: none;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: black;
+  font-weight: bold;
+}
+
+.guest li a, .profile li a {
+  font-size: 18px;
+  color: white;
+  background-color: #005477;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+/*
+
+.search {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search input[type="text"] {
+  padding: 6px;
+  margin-right: 10px;
+  border: none;
+  font-size: 17px;
+  border-radius: 4px;
+}
+
+.search button {
+  padding: 6px 10px;
+  background: white;
+  color: green;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.search button i {
+  font-size: 18px;
+}
+
+.search button:hover {
+  background: darkgreen;
+  color: white;
+} */
+
 /*! Login Form */
 
 /* Bordered form */
@@ -26,7 +123,7 @@
    
      /* Set a style for all buttons */
    button {
-       background-color: #04AA6D;
+       background-color: #005477;
        color: white;
        padding: 14px 20px;
        margin: 8px 0;
@@ -63,7 +160,7 @@
      }
    
      p.registerHere a {
-       color:#04AA6D;
+       color:#1a98ce;
      }
    
      /* Change styles for span and cancel button on extra small screens */
@@ -74,7 +171,7 @@
        }
      }
 
-/*! Login Form */
+
 
 
 
@@ -108,7 +205,7 @@ hr {
 
 /* Set a style for all buttons */
 button {
-  background-color: #04AA6D;
+  background-color: #005477;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -148,7 +245,7 @@ p.signInHere {
 }
 
 p.signInHere a {
-  color:#04AA6D;
+  color:#1a98ce;
 }
 
 /* Change styles for signup button on extra small screens */
@@ -157,7 +254,7 @@ p.signInHere a {
     width: 100%;
   }
 }
-/*! Register Form */
+
 
 /*! Page Not Found */
 .error-container {
@@ -168,7 +265,7 @@ p.signInHere a {
 }
 .error-container h1 {
   font-size: 8rem;
-  color: #FF6B6D;
+  color: #005477;
   margin-bottom: 1rem;
 }
 
@@ -179,7 +276,7 @@ p.signInHere a {
 }
 .home-link {
   text-decoration: none;
-  background-color: #04AA6D;
+  background-color: #005477;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -187,7 +284,99 @@ p.signInHere a {
   transition: background-color 0.3s ease;
 }
 .home-link:hover {
-  background-color: #04c880;
+  background-color: #005477;
 }
 
-/*! Page Not Found */
+
+
+
+/*! About */
+
+/* 
+*, *:before, *:after {
+  box-sizing: inherit;
+} 
+  */
+
+img {
+ width: 100%
+}
+
+.about-row {
+display: flex;
+justify-content: center;
+gap: 50px;
+padding: 30px 0px;
+}
+
+.about-column {
+  max-width: 30%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.about-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  border-radius: 5px;
+}
+
+.about-section {
+  padding: 40px;
+  text-align: center;
+  background-color: #1a98ce;
+  color: black;
+}
+
+.about-section h1 {
+  padding: 20px;
+  font-size: 50px;
+  font-style: italic;
+}
+
+.about-section p {
+  font-size: 25px;
+}
+
+.about-container {
+  padding: 10px 16px;
+}
+
+.about-container p {
+  font-size: 18px;
+  padding: 5px;
+}
+
+.about-container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+p.title {
+  padding: 0px;
+  color: grey;
+}
+
+p.email {
+  font-weight: bold;
+}
+
+p.keenEye {
+  font-style: italic;
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+  .about-column {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+
+
+
