@@ -7,16 +7,18 @@ import Register from './components/register/Register'
 import About from './components/about/About'
 import PageNotFound from './components/pageNotFound/PageNotFound'
 import Home from './components/home/Home';
+import Create from './components/create/Create';
 
 function App() {
   return (
     <>
-    <Header />
+<Header />
 
 <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<Register />} />
+  <Route path="/create" element={<Create />} />
   <Route path="/about" element={<About />} />
   <Route path="*" element={<PageNotFound />} />
 </Routes>

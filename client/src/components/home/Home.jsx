@@ -1,19 +1,20 @@
 import { Link } from "react-router";
+import styles from './Home.module.css';
 
 export default function Home() {
     return (
         <>
-        <div className="container">
+  <div className={styles.container}>
   
-  <div className="welcome">
+  <div className={styles.welcome}>
   
-    <div className="headings">
+    <div className={styles.headings}>
       <h3>Welcome to My App  <Link to="/about"> Read more ➪ </Link></h3>
       <h1>Some text here</h1>
       <p>Some text here </p>
   
 
-      <div className="guest">
+      <div className={styles.guest}>
         <ul>
           <li>
           <Link to="/login">Login</Link>

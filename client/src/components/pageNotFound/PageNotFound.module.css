@@ -1,0 +1,40 @@
+/*! Page Not Found */
+.errorContainer {
+    margin: 50px;
+    max-width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+  .errorContainer h1 {
+    font-size: 8rem;
+    color: #005477;
+    margin-bottom: 1rem;
+  }
+  
+  .errorContainer p {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  .homeLink {
+    text-decoration: none;
+    background-color: #005477;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+  }
+  .home-link:hover {
+    background-color: #005477;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

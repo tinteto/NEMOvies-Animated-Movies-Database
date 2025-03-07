@@ -1,0 +1,54 @@
+.container {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   }
+   
+   .welcome {
+       max-width: 60%;
+   }
+   
+   .headings h1 {
+   padding: 40px;
+   font-size: 55px;
+   }
+   
+   .headings h3 {
+   padding: 3px 0px;
+   border: 1px solid rgb(200, 199, 199);
+   border-radius: 10px;
+   color: grey;
+   font-size: 25px;
+   }
+   
+   .headings p {
+   padding: 0px 0px 50px 0px;
+   font-size: 22px;
+   }
+   
+   .headings h3 a {
+       text-decoration: none;
+       color: #005477;
+   }
+   
+   .guest ul {
+       display: flex;
+       justify-content: center;
+       gap: 30px;
+   }
+   
+   .guest ul li {
+       list-style: none outside;
+   }
+   .guest ul li a {
+       font-weight: bold;
+       text-decoration: none;
+       font-size: 18px;
+       color: white;
+       background-color: #005477;
+       border-radius: 4px;
+       padding: 6px 12px;
+   }

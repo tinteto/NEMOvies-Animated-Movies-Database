@@ -1,14 +1,14 @@
 //TODO: change colors
-
 import { Link } from "react-router";
+import styles from './Register.module.css'
 
 export default function Register() {
     return (
     <>
-    <div className="registerContainer">
+    <div className={styles.registerContainer}>
 
         <form>
-             <div className="container">
+             <div className={styles.container}>
              <h1>Sign Up</h1>
              <p className="fillIn">Please fill in this form to create an account.</p>
              <hr/>
@@ -32,11 +32,11 @@ export default function Register() {
              <input type="password" placeholder="Repeat Password" name="psw-repeat" />
 
 
-             <div className="clearfix">
+             <div className={styles.clearfix}>
                 <button type="submit" className="signupbtn">Sign Up</button>
              </div>
 
-             <p className="signInHere">You already have an account? <Link to="/login">Sign in here!</Link></p>
+             <p className={styles.signInHere}>You already have an account? <Link to="/login">Sign in here!</Link></p>
              </div>
         </form>
     </div>

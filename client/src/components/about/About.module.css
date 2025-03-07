@@ -1,0 +1,85 @@
+/*! About */
+
+/* 
+*, *:before, *:after {
+  box-sizing: inherit;
+} 
+  */
+
+  img {
+    width: 100%
+   }
+   
+   .aboutRow {
+   display: flex;
+   justify-content: center;
+   gap: 50px;
+   padding: 30px 0px;
+   }
+   
+   .aboutColumn {
+     max-width: 30%;
+     margin-bottom: 16px;
+     padding: 0 8px;
+   }
+   
+   .aboutCard {
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     margin: 8px;
+     border-radius: 5px;
+   }
+   
+   .aboutSection {
+     padding: 40px;
+     text-align: center;
+     background-color: #1a98ce;
+     color: black;
+   }
+   
+   .aboutSection h1 {
+     padding: 20px;
+     font-size: 50px;
+     font-style: italic;
+   }
+   
+   .aboutSection p {
+     font-size: 25px;
+   }
+   
+   .aboutContainer {
+     padding: 10px 16px;
+   }
+   
+   .aboutContainer p {
+     font-size: 18px;
+     padding: 5px;
+   }
+   
+   .aboutContainer::after, .row::after {
+     content: "";
+     clear: both;
+     display: table;
+   }
+   
+   p.title {
+     padding: 0px;
+     color: grey;
+   }
+   
+   p.email {
+     font-weight: bold;
+   }
+   
+   p.keenEye {
+     font-style: italic;
+   }
+   
+   
+   
+   
+   @media screen and (max-width: 650px) {
+     .aboutColumn {
+       width: 100%;
+       display: block;
+     }
+   }
