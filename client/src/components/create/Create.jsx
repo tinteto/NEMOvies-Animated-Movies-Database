@@ -8,7 +8,7 @@ export default function Create() {
 
         <form>
     <div className="recipeName">
-        <label for="name">Name:</label>
+        <label htmlFor="name">Name:</label>
         <input type="text"  name="name" placeholder="Enter name..." />
     </div>
 
@@ -18,7 +18,7 @@ export default function Create() {
  
 
     <div className="ingredients">
-        <label for="ingredients">Ingredients:</label>
+        <label htmlFor="ingredients">Ingredients:</label>
         <textarea 
         type="text" 
         name="ingredients" 
@@ -29,7 +29,7 @@ export default function Create() {
     </div>
 
     <div className="steps">
-        <label for="steps">Instructions:</label>
+        <label htmlFor="steps">Instructions:</label>
        <textarea 
        type="text" 
        name="steps" 

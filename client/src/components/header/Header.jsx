@@ -14,7 +14,7 @@ export default function Header() {
         <div className={styles.user}>
             <div className={styles.home}>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="#">Catalog</Link></li>
+            <li><Link to="/catalog">Catalog</Link></li>
             <li><Link to="/create">Create</Link></li>
             <li><Link to="/about">About us</Link></li>
            </div>
