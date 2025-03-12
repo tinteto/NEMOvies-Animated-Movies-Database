@@ -22,8 +22,14 @@
    const result = await response.json();
 
    return result;
+ },
 
- }
+async getOneMovieById(movieId) {
+   const response = await fetch(`${apiUrl}/data/movies/${movieId}`);
+   const result = await response.json();
+
+   return result;
+}
 }
 
  
