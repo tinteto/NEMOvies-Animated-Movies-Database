@@ -8,6 +8,22 @@
 
     return result;
  },
+
+ //!TODO returns error unauthorized
+ async createItem(itemData) {
+   const response = await fetch(`${apiUrl}/data/movies`, {
+      method: 'POST',
+      headers: {
+         'Content-Type': 'application/json', 
+      },
+      body: JSON.stringify(itemData),
+   });
+
+   const result = await response.json();
+
+   return result;
+
+ }
 }
 
  

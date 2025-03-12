@@ -14,6 +14,7 @@ function App() {
     <>
 <Header />
 
+<main>
 <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/login" element={<Login />} />
@@ -22,7 +23,11 @@ function App() {
   <Route path="/about" element={<About />} />
   <Route path="*" element={<PageNotFound />} />
 </Routes>
-    </>
+</main>
+
+<Footer />
+
+</>
   )
 }
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import apiService from '../../services/apiService';
-import MovieItem from './MovieItem';
+import MovieCatalogItem from './movieCatalogItem/MovieCatalogItem';
 
 
 export default function Catalog() {
@@ -16,13 +16,14 @@ const [movies, setMovies] = useState([]);
     }, []);
 
     return(
- <>
-<main className="catalog">
-{movies.map(movie => <MovieItem 
-key={movie._id} 
-{...movie}
-/>)}
-</main>
- </>
+<>
+<section className="catalogPage">
+<h1>View All Movies</h1>
+    
+{movies.map(movie => <MovieCatalogItem key={movie._id} {...movie} />)}
+
+<h3 className="noItems">No Movies Yet</h3>
+</section>
+</>
     )
 }
