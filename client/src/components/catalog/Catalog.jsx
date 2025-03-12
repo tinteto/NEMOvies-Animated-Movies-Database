@@ -9,9 +9,7 @@ const [movies, setMovies] = useState([]);
     useEffect(() => {
     apiService.getAllItems()
     .then(result => {
-        console.log(result);
-        
-       setMovies(result);
+    setMovies(result);
     })
     }, []);
 
@@ -22,7 +20,8 @@ const [movies, setMovies] = useState([]);
     
 {movies.map(movie => <MovieCatalogItem key={movie._id} {...movie} />)}
 
-<h3 className="noItems">No Movies Yet</h3>
+{movies.length === 0 && <h3 className="noItems">No Movies Yet</h3>}
+
 </section>
 </>
     )
