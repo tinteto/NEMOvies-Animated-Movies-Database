@@ -1,22 +1,21 @@
  const apiUrl = 'http://localhost:3030';
 
  export default {
- async getAllItems() {
+ async getAllMovies() {
     const response = await fetch(`${apiUrl}/data/movies`);
     const result = await response.json();
   
-
     return result;
  },
 
  //!TODO returns error unauthorized
- async createItem(itemData) {
+ async createMovie(movieData) {
    const response = await fetch(`${apiUrl}/data/movies`, {
       method: 'POST',
       headers: {
          'Content-Type': 'application/json', 
       },
-      body: JSON.stringify(itemData),
+      body: JSON.stringify(movieData),
    });
 
    const result = await response.json();

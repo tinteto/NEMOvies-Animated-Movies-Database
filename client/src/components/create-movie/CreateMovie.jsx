@@ -1,19 +1,19 @@
 //TODO: try-catch
 import { useNavigate } from 'react-router';
 import apiService from '../../services/apiService';
-import styles from './Create.module.css'
+import styles from './CreateMovie.module.css'
 
-export default function Create() {
+export default function CreateMovie() {
 // redirect to page
 const redirectTo = useNavigate();
 
 //взимаме данните от формата чрез formData и подаваме фунцията onSubmit на формата
 const onSubmit = async (formData) => {
-const itemData = Object.fromEntries(formData);
-console.log(itemData);
+const movieData = Object.fromEntries(formData);
+console.log(movieData);
 
 //изпращаме взетите данни до request функцията и тя прави заявка до сървъра
-await apiService.createItem(itemData);
+await apiService.createMovie(movieData);
 
 redirectTo('/catalog');
 }
@@ -55,8 +55,8 @@ redirectTo('/catalog');
        ></textarea>
     </div> */}
 
-    <div className="create-item-buttons">
-        <button type="submit" className="create">Create item</button>
+    <div className="addMovieButtons">
+        <button type="submit" className="create">Add Movie</button>
         <button className="cancel">Cancel</button>
     </div>
 
