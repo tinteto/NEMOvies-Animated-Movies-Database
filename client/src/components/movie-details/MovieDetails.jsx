@@ -1,20 +1,29 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import apiService from '../../services/apiService';
 import styles from './MovieDetails.module.css';
 
 export default function MovieDetails() {
+    const redirectTo = useNavigate();
     //сетвам филма във стейта
     const [movie, setOneMovie] = useState({});
     //взимам си id-то от url-a
     const {movieId} = useParams();
-
+ 
+    
     useEffect(() => {
         apiService.getOneMovieById(movieId)
         .then(result => {
             setOneMovie(result);
     });
     }, [movieId]);
+
+
+    const movieDeleteClickHandler = async () => {
+    await apiService.deleteMovieById(movieId);
+
+    redirectTo('/catalog');
+    }
 
     return(
         <>
@@ -28,7 +37,7 @@ export default function MovieDetails() {
                 
                 <div className="btnContainer">
                     <button className="btn edit">Edit</button>
-                    <button className="btn delete">Delete</button>
+                    <button  onClick={movieDeleteClickHandler} className="btn delete">Delete</button> {/* onClick={movieDeleteClickHandler} */}
                 </div>
             </div>
         </div>

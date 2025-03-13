@@ -28,14 +28,22 @@ async getOneMovieById(movieId) {
    const result = await response.json();
 
    return result;
-}
+},
+
+ //!TODO returns error unauthorized
+async deleteMovieById(movieId) {
+ const response = await fetch(`${apiUrl}/data/movies/${movieId}`, {
+   method: 'DELETE'
+ });
+ 
+ return response; 
+},
+
 }
 
- 
- //! get single item by Id
- //(`${apiUrl}/data/collection/itemId`)
- //! create new item
- //(`${apiUrl}/data/collection`) , send payload
+
+
+
  //! update new item
  //(`${apiUrl}/data/collection/itemId`) , send payload
  //!delete item
