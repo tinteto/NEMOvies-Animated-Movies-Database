@@ -5,9 +5,10 @@ import Header from './components/header/Header'
 import Home from './components/home/Home'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
+import CreateMovie from './components/create-movie/CreateMovie'
 import Catalog from './components/catalog/Catalog'
 import MovieDetails from './components/movie-details/MovieDetails'
-import CreateMovie from './components/create-movie/CreateMovie'
+import EditMovie from './components/edit-movie/EditMovie';
 import About from './components/about/About'
 import Footer from './components/footer/Footer'
 import PageNotFound from './components/page-not-found/PageNotFound'
@@ -24,9 +25,10 @@ function App() {
   <Route path="/" element={<Home />} />
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<Register />} />
+  <Route path="/create-movie" element={<CreateMovie />} />
   <Route path="/catalog" element={<Catalog />} />
   <Route path="/catalog/:movieId/details" element={<MovieDetails />} />
-  <Route path="/create-movie" element={<CreateMovie />} />
+  <Route path="catalog/:movieId/edit" element={<EditMovie />} />
   <Route path="/about" element={<About />} />
   <Route path="*" element={<PageNotFound />} />
 </Routes>

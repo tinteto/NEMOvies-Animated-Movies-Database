@@ -35,8 +35,23 @@ async deleteMovieById(movieId) {
  const response = await fetch(`${apiUrl}/data/movies/${movieId}`, {
    method: 'DELETE'
  });
- 
+
  return response; 
+},
+
+async editMovieById(movieId, movieData) {
+   const response = await fetch(`${apiUrl}/data/movies/${movieId}`, {
+      method: 'PUT',
+      headers: {
+         'Content-Type': 'application/json',
+      },
+      //трябва да подам и id-то, защото при редакция сървъра не праща автоматично id
+      body: JSON.stringify({ ...movieData, _id: movieId }),
+   });
+
+   const result = await response.json();
+
+   return result;  
 },
 
 }

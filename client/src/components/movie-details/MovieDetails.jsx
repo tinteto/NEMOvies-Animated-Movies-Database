@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router';
+import { Link, useNavigate, useParams } from 'react-router';
 import apiService from '../../services/apiService';
 import styles from './MovieDetails.module.css';
 
@@ -36,7 +36,7 @@ export default function MovieDetails() {
                 <p className="date">Release Date: {movie._createdOn}</p>
                 
                 <div className="btnContainer">
-                    <button className="btn edit">Edit</button>
+                    <Link to={`/catalog/${movieId}/edit`} className="btn edit">Edit</Link>
                     <button  onClick={movieDeleteClickHandler} className="btn delete">Delete</button> {/* onClick={movieDeleteClickHandler} */}
                 </div>
             </div>
