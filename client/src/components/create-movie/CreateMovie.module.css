@@ -28,7 +28,7 @@ form {
 
   /* Set a style for all buttons */
 button {
-    background-color: #04AA6D;
+    background-color: #fb923c;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -39,7 +39,7 @@ button {
   
   /* Add a hover effect for buttons */
   button:hover {
-    opacity: 0.8;
+    background-color: #374151;
   }
   
   /* Extra style for the cancel button (red) */

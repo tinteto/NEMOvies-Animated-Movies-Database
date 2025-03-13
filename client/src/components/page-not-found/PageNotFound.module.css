@@ -7,7 +7,7 @@
   }
   .errorContainer h1 {
     font-size: 8rem;
-    color: #005477;
+    color: #fb923c;
     margin-bottom: 1rem;
   }
   
@@ -18,15 +18,15 @@
   }
   .homeLink {
     text-decoration: none;
-    background-color: #005477;
+    background-color:#fb923c;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1.2rem;
     transition: background-color 0.3s ease;
   }
-  .home-link:hover {
-    background-color: #005477;
+  .homeLink:hover {
+    background-color: #374151;
   }
   
   

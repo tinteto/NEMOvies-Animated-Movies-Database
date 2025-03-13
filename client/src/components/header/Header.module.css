@@ -1,5 +1,5 @@
 /*! Header */
-.appHeader {
+ /* .appHeader {
     display: flex;
     justify-content: space-between;
     background-color: #1a98ce;
@@ -57,7 +57,7 @@
     border-radius: 4px;
     padding: 6px 12px;
   }
-  /*
+ 
   
   .search {
     flex-grow: 1;

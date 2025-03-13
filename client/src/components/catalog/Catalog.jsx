@@ -16,7 +16,7 @@ const [movies, setMovies] = useState([]);
     return(
 <>
 <section className="catalogPage">
-<h1>View All Movies</h1>
+<h1>Featured Movies</h1>
     
 {movies.map(movie => <MovieCatalogItem key={movie._id} {...movie} />)}
 

@@ -18,7 +18,7 @@ export default function Login() {
                <label htmlFor="psw"><b>Password</b></label>
                <input type="password" placeholder="Enter Password" name="psw" />
     
-                <button type="submit">Login</button>
+                <button className={styles.loginBtn} type="submit">Login</button>
 
                 <p className={styles.registerHere}>You don't have an account yet? <Link to="/register">Register here!</Link></p>
            </div>

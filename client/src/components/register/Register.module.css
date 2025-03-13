@@ -27,8 +27,8 @@ hr {
 }
 
 /* Set a style for all buttons */
-button {
-  background-color: #005477;
+.signupbtn {
+  background-color: #fb923c;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -39,7 +39,7 @@ button {
 }
 
 button:hover {
-  opacity:1;
+  background-color: #374151;
 }
 
 
@@ -68,7 +68,7 @@ p.signInHere {
 }
 
 p.signInHere a {
-  color:#1a98ce;
+  color:#fb923c;
 }
 
 /* Change styles for signup button on extra small screens */

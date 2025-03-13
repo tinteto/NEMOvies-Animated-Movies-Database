@@ -25,8 +25,8 @@
      }
    
      /* Set a style for all buttons */
-   button {
-       background-color: #005477;
+   .loginBtn {
+       background-color: #fb923c;
        color: white;
        padding: 14px 20px;
        margin: 8px 0;
@@ -37,7 +37,7 @@
      
      /* Add a hover effect for buttons */
      button:hover {
-       opacity: 0.8;
+      background-color: #374151;
      }
      
    
@@ -63,7 +63,7 @@
      }
    
      p.registerHere a {
-       color:#1a98ce;
+       color:#fb923c;
      }
    
      /* Change styles for span and cancel button on extra small screens */

@@ -33,7 +33,7 @@ export default function Register() {
 
 
              <div className={styles.clearfix}>
-                <button type="submit" className="signupbtn">Sign Up</button>
+                <button type="submit" className={styles.signupbtn}>Sign Up</button>
              </div>
 
              <p className={styles.signInHere}>You already have an account? <Link to="/login">Sign in here!</Link></p>
