@@ -12,18 +12,27 @@ import EditMovie from './components/edit-movie/EditMovie';
 import About from './components/about/About'
 import Footer from './components/footer/Footer'
 import PageNotFound from './components/page-not-found/PageNotFound'
+import { useState } from 'react';
 
 
 
 function App() {
+const [email, setEmail] = useState('');
+
+const userLoginHandler = (email) => {
+  setEmail(email);
+}
+
+
+
   return (
-    <>
+<>
 <Header />
 
 <main>
 <Routes>
   <Route path="/" element={<Home />} />
-  <Route path="/login" element={<Login />} />
+  <Route path="/login" element={<Login onLogin={userLoginHandler}/>} />
   <Route path="/register" element={<Register />} />
   <Route path="/create-movie" element={<CreateMovie />} />
   <Route path="/catalog" element={<Catalog />} />
