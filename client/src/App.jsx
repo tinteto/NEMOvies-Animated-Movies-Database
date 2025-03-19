@@ -17,13 +17,11 @@ import { useState } from 'react';
 
 
 function App() {
-const [email, setEmail] = useState('');
+const [authData, setAuthData] = useState({});
 
-const userLoginHandler = (authData) => {
-  setEmail(authData.email); //State: "admin@abv.bg"
+const userLoginHandler = (authDataResult) => {
+  setAuthData(authDataResult); //запазваме във стейта цялата информация за user-a, която ни връща сървъра
 }
-
-
 
   return (
 <>
@@ -36,7 +34,7 @@ const userLoginHandler = (authData) => {
   <Route path="/register" element={<Register />} />
   <Route path="/create-movie" element={<CreateMovie />} />
   <Route path="/catalog" element={<Catalog />} />
-  <Route path="/catalog/:movieId/details" element={<MovieDetails />} />
+  <Route path="/catalog/:movieId/details" element={<MovieDetails email={authData.email} />} />
   <Route path="catalog/:movieId/edit" element={<EditMovie />} />
   <Route path="/about" element={<About />} />
   <Route path="*" element={<PageNotFound />} />
