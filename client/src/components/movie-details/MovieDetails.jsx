@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router';
 import apiService from '../../services/apiService';
+import { UserContext } from '../../contexts/userContext';
 import styles from './MovieDetails.module.css';
 
 export default function MovieDetails() {
     const redirectTo = useNavigate();
+    const { email } = useContext(UserContext); //взимаме имейла от спреднатата authData, който ще ползваме по-късно за коментарите
     //сетвам филма във стейта
     const [movie, setOneMovie] = useState({});
     //взимам си id-то от url-a

@@ -1,14 +1,14 @@
 //TODO: to change Images, colors
 import styles from './Login.module.css'
 import { Link, useNavigate } from "react-router";
-import { useActionState } from "react";
+import { useActionState, useContext } from "react";
 import { useLogin } from '../../apiHooks/authApiHooks';
+import { UserContext } from '../../contexts/userContext';
 
-export default function Login({
-  onLogin,
-}) {
+export default function Login() {
 
 const redirectTo = useNavigate();
+const { userLoginHandler } = useContext(UserContext);
 const { login } = useLogin();
 
 const loginHandler = async (prevousState, formData) => {
@@ -19,7 +19,7 @@ const authData = await login(values.email, values.password);
 //{email: 'admin@abv.bg', username: 'Admin', _id: '60f0cf0b-34b0-4abd-9769-8c42f830dffc', accessToken: '07e04e59ed34d2ebe148be6488de3542a7efbf82bdc69f68ad2a2ff68a510fb1'}
 
 
-onLogin(authData); //при логване запазваме цялата информация, която ни връща сървъра
+userLoginHandler(authData); //при логване запазваме цялата информация, която ни връща сървъра
 
 redirectTo('/catalog');
 

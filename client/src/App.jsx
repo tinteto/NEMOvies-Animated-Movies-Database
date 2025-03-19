@@ -13,6 +13,7 @@ import About from './components/about/About'
 import Footer from './components/footer/Footer'
 import PageNotFound from './components/page-not-found/PageNotFound'
 import { useState } from 'react';
+import { UserContext } from './contexts/userContext';
 
 
 
@@ -23,18 +24,21 @@ const userLoginHandler = (authDataResult) => {
   setAuthData(authDataResult); //запазваме във стейта цялата информация за user-a, която ни връща сървъра
 }
 
+//{...authData} спредваме данните, за да имаме директен достъп до всички пропъртита и изпращаме надолу по дървото и loginHandler-a
   return (
+<UserContext.Provider value={{...authData, userLoginHandler}}> 
+
 <>
 <Header />
 
 <main>
 <Routes>
   <Route path="/" element={<Home />} />
-  <Route path="/login" element={<Login onLogin={userLoginHandler}/>} />
+  <Route path="/login" element={<Login />} />
   <Route path="/register" element={<Register />} />
   <Route path="/create-movie" element={<CreateMovie />} />
   <Route path="/catalog" element={<Catalog />} />
-  <Route path="/catalog/:movieId/details" element={<MovieDetails email={authData.email} />} />
+  <Route path="/catalog/:movieId/details" element={<MovieDetails />} />
   <Route path="catalog/:movieId/edit" element={<EditMovie />} />
   <Route path="/about" element={<About />} />
   <Route path="*" element={<PageNotFound />} />
@@ -44,6 +48,8 @@ const userLoginHandler = (authDataResult) => {
 <Footer />
 
 </>
+
+</UserContext.Provider>
   )
 }
 
