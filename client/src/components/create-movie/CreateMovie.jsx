@@ -1,19 +1,25 @@
 //TODO: try-catch
 import { useNavigate } from 'react-router';
+import { useCreateMovie } from '../../apiHooks/crudApiHooks';
 import apiService from '../../services/apiService';
 import styles from './CreateMovie.module.css'
 
+
 export default function CreateMovie() {
-// redirect to page
 const redirectTo = useNavigate();
+const { createMovie } = useCreateMovie();
 
 //взимаме данните от формата чрез formData и подаваме фунцията onSubmit на формата
 const onSubmit = async (formData) => {
 const movieData = Object.fromEntries(formData);
 console.log(movieData);
 
+
+
 //изпращаме взетите данни до request функцията и тя прави заявка до сървъра
-await apiService.createMovie(movieData);
+const createdMovieData = await createMovie(movieData.title, movieData.img, movieData.description);
+console.log(createdMovieData);
+
 
 redirectTo('/catalog');
 }

@@ -1,4 +1,4 @@
- const apiUrl = 'http://localhost:3030';
+const apiUrl = 'http://localhost:3030';
 
  export default {
  async getAllMovies() {
@@ -8,20 +8,21 @@
     return result;
  },
 
- //!TODO returns error unauthorized
- async createMovie(movieData) {
-   const response = await fetch(`${apiUrl}/data/movies`, {
-      method: 'POST',
-      headers: {
-         'Content-Type': 'application/json', 
-      },
-      body: JSON.stringify(movieData),
-   });
+//  async createMovie(movieData) {
 
-   const result = await response.json();
+//    const response = await fetch(`${apiUrl}/data/movies`, {
+//       method: 'POST',
+//       headers: {
+//          'Content-Type': 'application/json', 
+//          'X-Authorization': accessToken,
+//       },
+//       body: JSON.stringify(movieData),
+//    });
 
-   return result;
- },
+//    const result = await response.json();
+
+//    return result;
+//  },
 
 async getOneMovieById(movieId) {
    const response = await fetch(`${apiUrl}/data/movies/${movieId}`);
@@ -38,6 +39,7 @@ async deleteMovieById(movieId) {
 
  return response; 
 },
+
 
 async editMovieById(movieId, movieData) {
    const response = await fetch(`${apiUrl}/data/movies/${movieId}`, {
