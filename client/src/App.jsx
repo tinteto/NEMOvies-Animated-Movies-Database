@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router';
-import './App.css'
+import { useState } from 'react';
+import { UserContext } from './contexts/userContext';
+
 
 import Header from './components/header/Header'
 import Home from './components/home/Home'
@@ -12,22 +14,25 @@ import EditMovie from './components/edit-movie/EditMovie';
 import About from './components/about/About'
 import Footer from './components/footer/Footer'
 import PageNotFound from './components/page-not-found/PageNotFound'
-import { useState } from 'react';
-import { UserContext } from './contexts/userContext';
+import './App.css'
+
 
 
 
 function App() {
-const [authData, setAuthData] = useState({});
 
+const [authData, setAuthData] = useState({});
 const userLoginHandler = (authDataResult) => {
-  setAuthData(authDataResult); //запазваме във стейта цялата информация за user-a, която ни връща сървъра
+  setAuthData(authDataResult); //запазваме във стейтa информацията за user-a, която ни връща сървъра
 }
+
+
+
+
 
 //{...authData} спредваме данните, за да имаме директен достъп до всички пропъртита и изпращаме надолу по дървото и loginHandler-a
   return (
 <UserContext.Provider value={{...authData, userLoginHandler}}> 
-
 <>
 <Header />
 
@@ -46,9 +51,7 @@ const userLoginHandler = (authDataResult) => {
 </main>
 
 <Footer />
-
 </>
-
 </UserContext.Provider>
   )
 }

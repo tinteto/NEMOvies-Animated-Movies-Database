@@ -6,7 +6,6 @@ import { useLogin } from '../../apiHooks/authApiHooks';
 import { UserContext } from '../../contexts/userContext';
 
 export default function Login() {
-
 const redirectTo = useNavigate();
 const { userLoginHandler } = useContext(UserContext);
 const { login } = useLogin();
