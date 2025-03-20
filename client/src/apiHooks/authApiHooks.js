@@ -1,3 +1,6 @@
+import { useContext, useEffect } from "react";
+import { UserContext } from "../contexts/userContext";
+
 const apiUrl = 'http://localhost:3030';
 
 //важен въпрос, който да си задаваме при създаването на hooks: кога се извиква - при mount или при възникване на събитие - onMount or onEvent
@@ -42,4 +45,26 @@ export const useRegister = () => {
     return {
         register,
     }
+}
+
+//useLogout - on Mount
+export const useLogout = () => {
+    const { accessToken, userLogoutHandler } = useContext(UserContext);
+
+    useEffect(() => {
+        if(!accessToken) {
+            return;
+        }
+
+        const response = fetch(`${apiUrl}/users/logout`, {
+            method: 'GET',
+            headers: {
+            'X-Authorization': accessToken,
+            }
+        }).then(userLogoutHandler) //при успешно logout-ване извикай userLogoutHandler
+    }, [accessToken, userLogoutHandler]);
+
+ return {
+    isLoggedOut: !!accessToken,
+ };
 }

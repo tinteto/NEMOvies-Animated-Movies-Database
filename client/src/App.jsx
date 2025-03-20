@@ -13,10 +13,9 @@ import MovieDetails from './components/movie-details/MovieDetails'
 import EditMovie from './components/edit-movie/EditMovie';
 import About from './components/about/About'
 import Footer from './components/footer/Footer'
+import Logout from './components/logout/Logout';
 import PageNotFound from './components/page-not-found/PageNotFound'
 import './App.css'
-
-
 
 
 function App() {
@@ -26,13 +25,14 @@ const userLoginHandler = (authDataResult) => {
   setAuthData(authDataResult); //запазваме във стейтa информацията за user-a, която ни връща сървъра
 }
 
-
-
+const userLogoutHandler = () => {
+  setAuthData({}); //initial data = {}, зачистваме state-a
+}
 
 
 //{...authData} спредваме данните, за да имаме директен достъп до всички пропъртита и изпращаме надолу по дървото и loginHandler-a
   return (
-<UserContext.Provider value={{...authData, userLoginHandler}}> 
+<UserContext.Provider value={{...authData, userLoginHandler, userLogoutHandler}}> 
 <>
 <Header />
 
@@ -47,6 +47,7 @@ const userLoginHandler = (authDataResult) => {
   <Route path="catalog/:movieId/edit" element={<EditMovie />} />
   <Route path="/about" element={<About />} />
   <Route path="*" element={<PageNotFound />} />
+  <Route path="/logout" element={<Logout />} />
 </Routes>
 </main>
 

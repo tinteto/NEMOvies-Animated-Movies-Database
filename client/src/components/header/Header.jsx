@@ -73,6 +73,14 @@ export default function Header() {
           >
             My profile
           </Link>
+
+
+          <Link
+            className="hidden rounded-md bg-neutral-700 px-5 py-2.5 text-sm font-medium text-stone-50 transition hover:bg-orange-400 sm:block"
+            to="/logout"
+          >
+            Logout
+          </Link>
         </div>
 
         <button
