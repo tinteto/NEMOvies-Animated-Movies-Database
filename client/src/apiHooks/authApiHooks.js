@@ -30,13 +30,13 @@ export const useLogin = () => {
 // useRegister - on Event
 export const useRegister = () => {
 
-    async function register(email, password) {
+    async function register(email, username, password) {
         const response = await fetch(`${apiUrl}/users/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({email, password}) //превръща данните в JSON обект
+            body: JSON.stringify({email, username, password}) //превръща данните в JSON обект
         });
         const result = await response.json();
         return result;

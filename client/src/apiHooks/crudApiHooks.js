@@ -3,7 +3,7 @@ import { UserContext } from "../contexts/userContext";
 
 const apiUrl = 'http://localhost:3030';
 
-
+// useCreateMovie - on event
 export const useCreateMovie = () => {
     const { accessToken } = useContext(UserContext);
     
@@ -14,7 +14,7 @@ export const useCreateMovie = () => {
                'Content-Type': 'application/json', 
                'X-Authorization': accessToken,
             },
-            body: JSON.stringify({ title, img, description}),
+            body: JSON.stringify({ title, img, description }),
          });
       
          const result = await response.json();

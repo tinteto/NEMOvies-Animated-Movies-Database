@@ -22,7 +22,7 @@ if(values.password !== repeatPassword) {
 }
 
 
-const authData = await register(values.email, values.password);
+const authData = await register(values.email, values.username, values.password);
 console.log(authData);
 
 userLoginHandler(authData); //запазваме данните за user-a във state-a
@@ -45,7 +45,7 @@ return (
   
 
              <label htmlFor="username"><b>Username</b></label>
-             <input type="text" placeholder="Enter Username" name="name" />
+             <input type="text" placeholder="Enter Username" name="username" />
    
 
  

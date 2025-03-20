@@ -1,8 +1,10 @@
 import { Link } from "react-router";
-import styles from './Header.module.css';
+import { useContext } from "react";
+import { UserContext } from "../../contexts/userContext";
 
 
 export default function Header() {
+  const { email, username } = useContext(UserContext);
     return (
         <>
 <header className="bg-white">
@@ -27,60 +29,54 @@ export default function Header() {
             <Link className="text-gray-500 transition hover:text-gray-500/75" to="/catalog"> Movie Catalog </Link>
           </li>
 
-          <li>
-            <Link className="text-gray-500 transition hover:text-gray-500/75" to="/create-movie"> Add Movie </Link>
-          </li>
-
+{email && (
+      <li>
+      <Link className="text-gray-500 transition hover:text-gray-500/75" to="/create-movie"> Add Movie </Link>
+      </li>
+)}
+      
           <li>
             <Link className="text-gray-500 transition hover:text-gray-500/75" to="/about"> About </Link>
           </li>
-
-{/*         <li>
-            <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Services </a>
-          </li>
-
-          <li>
-            <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Projects </a>
-          </li>
-
-          <li>
-            <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
-          </li> */}
         </ul>
       </nav>
 
       <div className="flex items-center gap-4">
         <div className="sm:flex sm:gap-4">
-   
-          <Link
-            className="block rounded-md bg-orange-400 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-neutral-700"
-            to="/login"
-          >
-            Login
-          </Link>
 
-          <Link
-            className="hidden rounded-md bg-neutral-700 px-5 py-2.5 text-sm font-medium text-stone-50 transition hover:bg-orange-400 sm:block"
-            to="/register"
-          >
-            Register
-          </Link>
+{email 
+? (
+      <>
+<Link
+  className="block rounded-md bg-orange-400 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-neutral-700"
+  to="/my-profile">
+  {username}'s profile
+</Link>
 
-          
-          <Link
-            className="block rounded-md bg-orange-400 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-neutral-700"
-            to="/my-profile"
-          >
-            My profile
-          </Link>
+<Link
+  className="hidden rounded-md bg-neutral-700 px-5 py-2.5 text-sm font-medium text-stone-50 transition hover:bg-orange-400 sm:block"
+  to="/logout">
+  Logout
+</Link>
+</>
+)
+: (
+  <>
+  <Link
+  className="block rounded-md bg-orange-400 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-neutral-700"
+  to="/login"
+>
+  Login
+</Link>
 
-
-          <Link
-            className="hidden rounded-md bg-neutral-700 px-5 py-2.5 text-sm font-medium text-stone-50 transition hover:bg-orange-400 sm:block"
-            to="/logout"
-          >
-            Logout
-          </Link>
+<Link
+  className="hidden rounded-md bg-neutral-700 px-5 py-2.5 text-sm font-medium text-stone-50 transition hover:bg-orange-400 sm:block"
+  to="/register"
+>
+  Register
+</Link>
+</>
+)}      
         </div>
 
         <button
@@ -98,6 +94,7 @@ export default function Header() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
+      
       </div>
     </div>
   </div>

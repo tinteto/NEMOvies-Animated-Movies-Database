@@ -14,7 +14,6 @@ const apiUrl = 'http://localhost:3030';
 //       method: 'POST',
 //       headers: {
 //          'Content-Type': 'application/json', 
-//          'X-Authorization': accessToken,
 //       },
 //       body: JSON.stringify(movieData),
 //    });
