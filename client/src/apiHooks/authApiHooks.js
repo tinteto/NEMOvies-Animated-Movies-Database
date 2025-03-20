@@ -2,7 +2,7 @@ const apiUrl = 'http://localhost:3030';
 
 //важен въпрос, който да си задаваме при създаването на hooks: кога се извиква - при mount или при възникване на събитие - onMount or onEvent
 
-//use Login - on Event
+//useLogin - on Event
 export const useLogin = () => {
 
     async function login(email, password) {
@@ -24,7 +24,7 @@ export const useLogin = () => {
 
 }
 
-
+// useRegister - on Event
 export const useRegister = () => {
 
     async function register(email, password) {

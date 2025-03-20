@@ -12,6 +12,14 @@ const { userLoginHandler } = useContext(UserContext);
 
 const registerHandler = async (previousState, formData) => {
 const values = Object.fromEntries(formData);
+const repeatPassword = formData.get('password-repeat');
+
+//TODO: error handling
+if(values.password !== repeatPassword) {
+    console.log('Password and Repeat Password do not match!');
+
+    return;  
+}
 
 
 const authData = await register(values.email, values.password);
