@@ -1,17 +1,11 @@
 import { useEffect, useState } from 'react'
 import apiService from '../../services/apiService';
 import MovieCatalogItem from './movieCatalogItem/MovieCatalogItem';
+import { useAllMovies } from '../../apiHooks/movieApiHooks';
 
 
 export default function Catalog() {
-const [movies, setMovies] = useState([]);
-
-    useEffect(() => {
-    apiService.getAllMovies()
-    .then(result => {
-    setMovies(result);
-    })
-    }, []);
+const { movies } = useAllMovies();
 
     return(
 <>
