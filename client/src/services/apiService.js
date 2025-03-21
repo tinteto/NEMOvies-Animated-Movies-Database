@@ -1,12 +1,12 @@
 const apiUrl = 'http://localhost:3030';
 
  export default {
- async getAllMovies() {
-    const response = await fetch(`${apiUrl}/data/movies`);
-    const result = await response.json();
+//  async getAllMovies() {
+//     const response = await fetch(`${apiUrl}/data/movies`);
+//     const result = await response.json();
   
-    return result;
- },
+//     return result;
+//  },
 
 //  async createMovie(movieData) {
 

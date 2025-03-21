@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-import apiService from '../../services/apiService';
 import MovieCatalogItem from './movieCatalogItem/MovieCatalogItem';
 import { useAllMovies } from '../../apiHooks/movieApiHooks';
 

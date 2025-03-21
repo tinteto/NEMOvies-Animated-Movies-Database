@@ -1,23 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../contexts/userContext";
+import { useParams } from "react-router";
 
 const apiUrl = 'http://localhost:3030';
-
-//useAllMovies - on mount
-export const useAllMovies = () => {
-  const [movies, setMovies] = useState([]);
-  useEffect(() => {
-    fetch(`${apiUrl}/data/movies`)
-      .then((response) => response.json())
-      .then((result) => {
-        setMovies(result);
-      });
-  }, []);
-
-  return {
-    movies,
-  };
-};
 
 // useCreateMovie - on event
 export const useCreateMovie = () => { 
@@ -38,9 +23,40 @@ export const useCreateMovie = () => {
          return result;
     }
 
-    return {
-        createMovie,
-    }
+    return { createMovie };
 
-  }
+};
+
+
+//useAllMovies - on mount
+export const useAllMovies = () => {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    fetch(`${apiUrl}/data/movies`)
+      .then((response) => response.json())
+      .then((result) => {
+        setMovies(result);
+      });
+  }, []);
+
+  return { movies };
+};
+
+//useOneMovie - onMount
+export const useOneMovie = (movieId) => {
+const [movie, setMovie] = useState({});
+// const { movieId } = useParams();
+
+useEffect(() => {
+    fetch(`${apiUrl}/data/movies/${movieId}`)
+    .then(response => response.json())
+    .then(result => {
+       setMovie(result)
+    })
+}, [movieId]);
+    
+return { movie }
+};
+
 
