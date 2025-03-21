@@ -9,6 +9,8 @@ export default function MovieDetails() {
     const redirectTo = useNavigate();
     const { movieId } = useParams();
     const { movie } = useOneMovie(movieId);
+    const { _id: userId } = useContext(UserContext);
+    
    // const { email } = useContext(UserContext); //взимаме имейла от спреднатата authData, който ще ползваме по-късно за коментарите
     const { deleteMovie } = useDeleteMovie();
 
@@ -24,6 +26,7 @@ export default function MovieDetails() {
     redirectTo('/catalog');
     }
 
+
     return(
         <>
         <div className="movieContainer">
@@ -35,8 +38,16 @@ export default function MovieDetails() {
                 <p className="date">Release Date: {movie._createdOn}</p>
                 
                 <div className="btnContainer">
+                    {userId === movie._ownerId
+                    ? 
+                    ( 
+                    <>
                     <Link to={`/catalog/${movieId}/edit`} className="btn edit">Edit</Link>
-                    <button onClick={movieDeleteClickHandler} className="btn delete">Delete</button> {/* onClick={movieDeleteClickHandler} */}
+                    <button onClick={movieDeleteClickHandler} className="btn delete">Delete</button>
+                    </> 
+                    )
+                    : null}
+       
                 </div>
             </div>
         </div>

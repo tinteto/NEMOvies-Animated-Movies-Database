@@ -17,7 +17,7 @@ export default function Home() {
           <h1>Latest Movies</h1>
 
           {latestMovies.map(movie => (
-          <div className="movie">
+          <div className="movie" key={movie._id}>
           <div className="img">
               <img src={movie.img} />
           </div>
