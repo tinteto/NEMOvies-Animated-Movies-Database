@@ -42,6 +42,22 @@ export const useAllMovies = () => {
   return { movies };
 };
 
+//useRecentMovies - onMount
+export const useLatestMovies = () => {
+    const [latestMovies, setLatest] = useState([]);
+
+    useEffect(() => {
+        fetch(`${apiUrl}/data/movies?sortBy=_createdOn%20desc`)
+        .then(response => response.json())
+        .then(result => 
+            setLatest(result)
+        )}, [])
+
+return { latestMovies };
+
+}
+
+
 //useOneMovie - onMount
 export const useOneMovie = (movieId) => {
 const [movie, setMovie] = useState({});
@@ -98,5 +114,6 @@ export const useDeleteMovie = () => {
     return { deleteMovie };
  
    }
+
 
 

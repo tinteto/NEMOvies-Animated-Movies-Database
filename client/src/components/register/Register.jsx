@@ -27,7 +27,7 @@ console.log(authData);
 
 userLoginHandler(authData); //запазваме данните за user-a във state-a
 
-redirectTo('/catalog');
+redirectTo('/');
 
 }
 

@@ -20,7 +20,7 @@ const authData = await login(values.email, values.password);
 
 userLoginHandler(authData); //при логване запазваме цялата информация, която ни връща сървъра
 
-redirectTo('/catalog');
+redirectTo('/');
 
 return values;
 

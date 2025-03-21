@@ -62,7 +62,5 @@ const apiUrl = 'http://localhost:3030';
  //(`${apiUrl}/data/comments?where=itemId%3D%22${itemId}%22`)
  //!post comment for an item
  // (`${apiUrl}/data/comments`), send payload
- //!get most recent items
- //(`${apiUrl}/data/items?sortBy=_createdOn%20desc`);
  //!search items
  //(`${apiUrl}/data/items?where=name%20LIKE%20%22${query}%22`);

@@ -21,7 +21,7 @@ export default function MovieDetails() {
 
     await deleteMovie(movieId);
 
-   redirectTo('/catalog');
+    redirectTo('/catalog');
     }
 
     return(
@@ -35,8 +35,8 @@ export default function MovieDetails() {
                 <p className="date">Release Date: {movie._createdOn}</p>
                 
                 <div className="btnContainer">
-                    <Link  to={`/catalog/${movieId}/edit`} className="btn edit">Edit</Link>
-                    <button  onClick={movieDeleteClickHandler} className="btn delete">Delete</button> {/* onClick={movieDeleteClickHandler} */}
+                    <Link to={`/catalog/${movieId}/edit`} className="btn edit">Edit</Link>
+                    <button onClick={movieDeleteClickHandler} className="btn delete">Delete</button> {/* onClick={movieDeleteClickHandler} */}
                 </div>
             </div>
         </div>
