@@ -45,12 +45,15 @@ export const useAllMovies = () => {
 //useRecentMovies - onMount
 export const useLatestMovies = () => {
     const [latestMovies, setLatest] = useState([]);
-    const searchParams = new URLSearchParams({
-        sortBy: '_createdOn desc',
-        pageSize: 4,
-    })
 
     useEffect(() => {
+        const searchParams = new URLSearchParams({
+            sortBy: '_createdOn desc',
+            pageSize: 4,
+            select: '_id,img,title'
+
+        });
+    
         fetch(`${apiUrl}/data/movies?${searchParams}`)
         .then(response => response.json())
         .then(result => 
