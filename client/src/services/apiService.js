@@ -23,12 +23,12 @@ const apiUrl = 'http://localhost:3030';
 //    return result;
 //  },
 
-async getOneMovieById(movieId) {
-   const response = await fetch(`${apiUrl}/data/movies/${movieId}`);
-   const result = await response.json();
+// async getOneMovieById(movieId) {
+//    const response = await fetch(`${apiUrl}/data/movies/${movieId}`);
+//    const result = await response.json();
 
-   return result;
-},
+//    return result;
+// },
 
  //!TODO returns error unauthorized
 async deleteMovieById(movieId) {
@@ -40,30 +40,24 @@ async deleteMovieById(movieId) {
 },
 
 
-async editMovieById(movieId, movieData) {
-   const response = await fetch(`${apiUrl}/data/movies/${movieId}`, {
-      method: 'PUT',
-      headers: {
-         'Content-Type': 'application/json',
-      },
-      //трябва да подам и id-то, защото при редакция сървъра не праща автоматично id
-      body: JSON.stringify({ ...movieData, _id: movieId }),
-   });
+// async editMovieById(movieId, movieData) {
+//    const response = await fetch(`${apiUrl}/data/movies/${movieId}`, {
+//       method: 'PUT',
+//       headers: {
+//          'Content-Type': 'application/json',
+//       },
+//       //трябва да подам и id-то, защото при редакция сървъра не праща автоматично id
+//       body: JSON.stringify({ ...movieData, _id: movieId }),
+//    });
 
-   const result = await response.json();
+//    const result = await response.json();
 
-   return result;  
-},
+//    return result;  
+// },
 
 }
 
 
-
-
- //! update new item
- //(`${apiUrl}/data/collection/itemId`) , send payload
- //!delete item
- //(`${apiUrl}/data/collection/itemId`)
  //! get all comments for an item
  //(`${apiUrl}/data/comments?where=itemId%3D%22${itemId}%22`)
  //!post comment for an item

@@ -1,29 +1,21 @@
 //TODO: try-catch
-import { useNavigate, useParams } from 'react-router'
 import styles from './EditMovie.module.css'
-import apiService from '../../services/apiService';
-import { useEffect, useState } from 'react';
+
+import { useNavigate, useParams } from 'react-router'
+import { useEditMovie, useOneMovie } from '../../apiHooks/movieApiHooks'
 
 export default function EditMovie() {
-const [movie, setMovie] = useState({});
-//взимаме id-to от url-a
-const { movieId } = useParams();
 const redirectTo = useNavigate();
-
-//правим заявка за конкретния филм и го запазваме във стейта, от стейта въвеждаме във формата препопулираните данни
-useEffect(() => {
-apiService.getOneMovieById(movieId)
-.then(result => {
-    setMovie(result)
-}
-)}, [movieId]);
+const { movieId } = useParams();
+const { movie } = useOneMovie(movieId);
+const { editMovie } = useEditMovie();
 
 
 const onFormEdit = async (formData) => {
     //при попълване на ъпдейтнатите данни ги вземаме и ги пращаме на сървъра
     const movieData = Object.fromEntries(formData);
 
-    await apiService.editMovieById(movieId, movieData);
+    await editMovie(movieId, movieData);
 
     redirectTo(`/catalog/${movieId}/details`);
 }

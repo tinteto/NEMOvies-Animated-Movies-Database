@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../contexts/userContext";
-import { useParams } from "react-router";
 
 const apiUrl = 'http://localhost:3030';
 
@@ -46,7 +45,6 @@ export const useAllMovies = () => {
 //useOneMovie - onMount
 export const useOneMovie = (movieId) => {
 const [movie, setMovie] = useState({});
-// const { movieId } = useParams();
 
 useEffect(() => {
     fetch(`${apiUrl}/data/movies/${movieId}`)
@@ -58,5 +56,28 @@ useEffect(() => {
     
 return { movie }
 };
+
+//useEditMovie - on Event
+export const useEditMovie = () => {
+    const { accessToken } = useContext(UserContext);
+
+   async function editMovie(movieId, movieData) {
+        const response = await fetch(`${apiUrl}/data/movies/${movieId}`, {
+            method: 'PUT',
+            headers: {
+               'Content-Type': 'application/json',
+               'X-Authorization': accessToken,
+            },
+            //трябва да подам и id-то, защото при редакция сървъра не праща автоматично id
+            body: JSON.stringify({ ...movieData, _id: movieId }),
+         });
+      
+         const result = await response.json();
+      
+         return result;
+        }
+    return { editMovie }
+
+ }
 
 

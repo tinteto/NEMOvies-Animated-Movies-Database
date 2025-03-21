@@ -4,17 +4,19 @@ import { UserContext } from '../../contexts/userContext';
 import { useOneMovie } from '../../apiHooks/movieApiHooks';
 import styles from './MovieDetails.module.css';
 
+
 export default function MovieDetails() {
+     // const redirectTo = useNavigate();
     const { movieId } = useParams();
     const { movie } = useOneMovie(movieId);
-   // const redirectTo = useNavigate();
    // const { email } = useContext(UserContext); //взимаме имейла от спреднатата authData, който ще ползваме по-късно за коментарите
  
 
-    // const movieDeleteClickHandler = async () => {
-    // await apiService.deleteMovieById(movieId);
+//     const movieDeleteClickHandler = async () => {
+//     await apiService.deleteMovieById(movieId);
 
-   // redirectTo('/catalog');
+//    redirectTo('/catalog');
+//     }
 
     return(
         <>
@@ -27,7 +29,7 @@ export default function MovieDetails() {
                 <p className="date">Release Date: {movie._createdOn}</p>
                 
                 <div className="btnContainer">
-                    <Link className="btn edit">Edit</Link>  {/* to={`/catalog/${movieId}/edit`}  */}
+                    <Link  to={`/catalog/${movieId}/edit`} className="btn edit">Edit</Link>
                     <button className="btn delete">Delete</button> {/* onClick={movieDeleteClickHandler} */}
                 </div>
             </div>
