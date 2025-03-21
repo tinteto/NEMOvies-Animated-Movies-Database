@@ -80,4 +80,23 @@ export const useEditMovie = () => {
 
  }
 
+ //useDeleteMovie - onEvent
+export const useDeleteMovie = () => {
+    const { accessToken } = useContext(UserContext);
+
+    async function deleteMovie(movieId) {
+        const response = await fetch(`${apiUrl}/data/movies/${movieId}`, {
+            method: 'DELETE',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-Authorization': accessToken,
+           }
+        })
+          return response; 
+    }
+
+    return { deleteMovie };
+ 
+   }
+
 

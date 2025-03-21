@@ -31,13 +31,13 @@ const apiUrl = 'http://localhost:3030';
 // },
 
  //!TODO returns error unauthorized
-async deleteMovieById(movieId) {
- const response = await fetch(`${apiUrl}/data/movies/${movieId}`, {
-   method: 'DELETE'
- });
+// async deleteMovieById(movieId) {
+//  const response = await fetch(`${apiUrl}/data/movies/${movieId}`, {
+//    method: 'DELETE'
+//  });
 
- return response; 
-},
+//  return response; 
+// },
 
 
 // async editMovieById(movieId, movieData) {
