@@ -45,9 +45,13 @@ export const useAllMovies = () => {
 //useRecentMovies - onMount
 export const useLatestMovies = () => {
     const [latestMovies, setLatest] = useState([]);
+    const searchParams = new URLSearchParams({
+        sortBy: '_createdOn desc',
+        pageSize: 4,
+    })
 
     useEffect(() => {
-        fetch(`${apiUrl}/data/movies?sortBy=_createdOn%20desc`)
+        fetch(`${apiUrl}/data/movies?${searchParams}`)
         .then(response => response.json())
         .then(result => 
             setLatest(result)
@@ -117,3 +121,9 @@ export const useDeleteMovie = () => {
 
 
 
+ //! get all comments for an item
+ //(`${apiUrl}/data/comments?where=itemId%3D%22${itemId}%22`)
+ //!post comment for an item
+ // (`${apiUrl}/data/comments`), send payload
+ //!search items
+ //(`${apiUrl}/data/items?where=name%20LIKE%20%22${query}%22`);

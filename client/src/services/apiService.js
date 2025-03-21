@@ -58,9 +58,3 @@ const apiUrl = 'http://localhost:3030';
 }
 
 
- //! get all comments for an item
- //(`${apiUrl}/data/comments?where=itemId%3D%22${itemId}%22`)
- //!post comment for an item
- // (`${apiUrl}/data/comments`), send payload
- //!search items
- //(`${apiUrl}/data/items?where=name%20LIKE%20%22${query}%22`);
