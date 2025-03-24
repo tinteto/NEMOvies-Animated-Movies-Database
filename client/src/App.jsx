@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router';
 import { useState } from 'react';
 import { UserContext } from './contexts/userContext';
-
+import usePersistedState from './apiHooks/usePersistedState';
 
 import Header from './components/header/Header'
 import Home from './components/home/Home'
@@ -15,9 +15,9 @@ import About from './components/about/About'
 import Footer from './components/footer/Footer'
 import Logout from './components/logout/Logout';
 import PageNotFound from './components/page-not-found/PageNotFound'
-import './App.css'
-import usePersistedState from './apiHooks/usePersistedState';
+import AuthGuard from './components/guards/authGuards';
 
+import './App.css'
 
 function App() {
 
@@ -43,13 +43,17 @@ const userLogoutHandler = () => {
   <Route path="/" element={<Home />} />
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<Register />} />
-  <Route path="/create-movie" element={<CreateMovie />} />
   <Route path="/catalog" element={<Catalog />} />
   <Route path="/catalog/:movieId/details" element={<MovieDetails />} />
-  <Route path="catalog/:movieId/edit" element={<EditMovie />} />
   <Route path="/about" element={<About />} />
   <Route path="*" element={<PageNotFound />} />
-  <Route path="/logout" element={<Logout />} />
+
+
+  <Route element={<AuthGuard />}>
+    <Route path="/create-movie" element={<CreateMovie />} />
+    <Route path="catalog/:movieId/edit" element={<EditMovie />} />
+    <Route path="/logout" element={<Logout />} />
+  </Route>
 </Routes>
 </main>
 
