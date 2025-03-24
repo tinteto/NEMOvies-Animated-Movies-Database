@@ -46,7 +46,9 @@ export default function MovieDetails() {
                     <button onClick={movieDeleteClickHandler} className="btn delete">Delete</button>
                     </> 
                     )
-                    : null}
+                    : 
+                    null
+                    }
        
                 </div>
             </div>

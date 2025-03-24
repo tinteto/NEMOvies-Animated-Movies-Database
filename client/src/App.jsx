@@ -16,11 +16,13 @@ import Footer from './components/footer/Footer'
 import Logout from './components/logout/Logout';
 import PageNotFound from './components/page-not-found/PageNotFound'
 import './App.css'
+import usePersistedState from './apiHooks/usePersistedState';
 
 
 function App() {
 
-const [authData, setAuthData] = useState({});
+const [authData, setAuthData] = usePersistedState('auth',{}); //stateKey
+
 const userLoginHandler = (authDataResult) => {
   setAuthData(authDataResult); //запазваме във стейтa информацията за user-a, която ни връща сървъра
 }
