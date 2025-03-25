@@ -1,7 +1,8 @@
-import { Routes, Route } from 'react-router';
-import { useState } from 'react';
-import { UserContext } from './contexts/userContext';
-import usePersistedState from './apiHooks/usePersistedState';
+import './App.css'
+import { Routes, Route } from 'react-router'
+import { useState } from 'react'
+import { UserContext } from './contexts/userContext'
+import usePersistedState from './apiHooks/usePersistedState'
 
 import Header from './components/header/Header'
 import Home from './components/home/Home'
@@ -10,14 +11,16 @@ import Register from './components/register/Register'
 import CreateMovie from './components/create-movie/CreateMovie'
 import Catalog from './components/catalog/Catalog'
 import MovieDetails from './components/movie-details/MovieDetails'
-import EditMovie from './components/edit-movie/EditMovie';
+import EditMovie from './components/edit-movie/EditMovie'
 import About from './components/about/About'
 import Footer from './components/footer/Footer'
-import Logout from './components/logout/Logout';
+import Logout from './components/logout/Logout'
 import PageNotFound from './components/page-not-found/PageNotFound'
-import AuthGuard from './components/guards/authGuards';
+import AuthGuard from './components/guards/authGuard'
+import UserGuard from './components/guards/userGuard'
 
-import './App.css'
+
+
 
 function App() {
 
@@ -41,12 +44,15 @@ const userLogoutHandler = () => {
 <main>
 <Routes>
   <Route path="/" element={<Home />} />
-  <Route path="/login" element={<Login />} />
-  <Route path="/register" element={<Register />} />
   <Route path="/catalog" element={<Catalog />} />
   <Route path="/catalog/:movieId/details" element={<MovieDetails />} />
   <Route path="/about" element={<About />} />
   <Route path="*" element={<PageNotFound />} />
+
+  <Route element={<UserGuard />}>
+  <Route path="/login" element={<Login />} />
+  <Route path="/register" element={<Register />} />
+  </Route>
 
 
   <Route element={<AuthGuard />}>
