@@ -15,10 +15,10 @@ export default function About() {
       <div className={styles.aboutCard}>
         <img src="./../../assets/caju-gomes-QDq3YliZg48-unsplash.jpg" alt="teamMemberPhoto" />
         <div className={styles.aboutContainer}>
-          <h2>Radostina Dimitrova</h2>
-          <p className="title">Founder</p>
-          <p className="keenEye">Some text here</p>
-          <p className="email">radostina@example.com</p>
+          <h2>Radostina Georgieva</h2>
+          <p className={styles.title}>Founder</p>
+          <p className={styles.keenEye}>Some text here</p>
+          <p className={styles.email}>radostina@example.com</p>
         </div>
       </div>
     </div>
@@ -27,10 +27,10 @@ export default function About() {
       <div className={styles.aboutCard}>
         <img src="./../../assets/s-l-M3VeZnz3cLQ-unsplash.jpg" alt="teamMemberPhoto" />
         <div className={styles.aboutContainer}>
-          <h2>Vania Angelova</h2>
-          <p className="title">Designer</p>
-          <p className="keenEye">Some text here</p>
-          <p className="email">vania@example.com</p>
+          <h2>Dimitar Georgiev</h2>
+          <p className={styles.title}>Designer</p>
+          <p className={styles.keenEye}>Some text here</p>
+          <p className={styles.email}>dimitar@example.com</p>
         </div>
       </div>
     </div>
