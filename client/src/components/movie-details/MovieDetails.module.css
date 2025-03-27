@@ -1,0 +1,99 @@
+
+  /* Movie Container */
+  .movieContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  /* Movie Details Section */
+  .movieDetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  /* Movie Poster Image */
+  .movieDetails img {
+    width: 250px;
+    height: 375px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Text Section */
+  .text {
+    max-width: 600px;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .text p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  /* Release Date */
+  .date {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Container */
+  .btnContainer {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Buttons */
+  .btnEdit, .btnDelete {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btnEdit:hover, .btnDelete:hover {
+    transform: translateY(-2px);
+  }
+  
+  .btnEdit {
+    background-color:  #fb923c;
+    color: white;
+  }
+  
+  .btnEdit:hover {
+    background-color: #374151;
+  }
+  
+  .btnDelete {
+    background-color: #374151;
+    color: white;
+  }
+  
+  .btndDelete:hover {
+    background-color: #fb923c;
+  }
+  

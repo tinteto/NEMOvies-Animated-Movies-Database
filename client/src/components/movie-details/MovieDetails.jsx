@@ -29,21 +29,21 @@ export default function MovieDetails() {
 
     return(
         <>
-        <div className="movieContainer">
-        <div className="movieDetails">
+        <div className={styles.movieContainer}>
+        <div className={styles.movieDetails}>
             <img src={movie.img} alt="Movie Poster" />
-            <div className="text">
+            <div className={styles.text}>
                 <h1>{movie.title}</h1>
                 <p>{movie.description}</p>
-                <p className="date">Release Date: {movie._createdOn}</p>
+                <p className={styles.date}>Release Date: {movie._createdOn}</p>
                 
-                <div className="btnContainer">
+                <div className={styles.btnContainer}>
                     {userId === movie._ownerId
                     ? 
                     ( 
                     <>
-                    <Link to={`/catalog/${movieId}/edit`} className="btn edit">Edit</Link>
-                    <button onClick={movieDeleteClickHandler} className="btn delete">Delete</button>
+                    <Link to={`/catalog/${movieId}/edit`} className={styles.btnEdit}>Edit</Link>
+                    <Link onClick={movieDeleteClickHandler} className={styles.btnDelete}>Delete</Link>
                     </> 
                     )
                     : 
