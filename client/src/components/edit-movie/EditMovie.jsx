@@ -27,8 +27,22 @@ const onFormEdit = async (formData) => {
 
     <form action={onFormEdit}>
     <div className="title">
-        <label htmlFor="title">Title:</label>
+        <label htmlFor="title">Movie Title:</label>
         <input type="text"  id="title" name="title" defaultValue={movie.title}/>
+    </div>
+
+    <div className="releaseDate">
+        <label htmlFor="releaseDate">Release Date:</label>
+        <input type="text"  id="releaseDate" name="releaseDate" defaultValue={movie.releaseDate}/>
+    </div>
+    <div className="creators">
+        <label htmlFor="creators">Creators:</label>
+        <input type="text"  id="creators" name="creators" defaultValue={movie.creators} />
+    </div>
+
+    <div className="stars">
+        <label htmlFor="stars">Stars:</label>
+        <input type="text"  id="stars" name="stars" defaultValue={movie.stars} />
     </div>
 
     <div className="img">
@@ -46,17 +60,6 @@ const onFormEdit = async (formData) => {
         defaultValue={movie.description}
         ></textarea>
     </div>
-
-   {/*  <div className="steps">
-        <label htmlFor="steps">Instructions:</label>
-       <textarea 
-       type="text" 
-       name="steps" 
-       id="steps" 
-       rows="5" 
-       placeholder="Enter all info required..."
-       ></textarea>
-    </div> */}
 
     <div className="editMovieButtons">
         <button  type="submit" className="edit">Edit Movie</button> 

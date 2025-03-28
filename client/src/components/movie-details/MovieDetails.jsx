@@ -34,8 +34,11 @@ export default function MovieDetails() {
             <img src={movie.img} alt="Movie Poster" />
             <div className={styles.text}>
                 <h1>{movie.title}</h1>
+                <h4 className={styles.date}>Release Date: {movie.releaseDate}</h4>
+                <h2>Creators: {movie.creators}</h2>
+                <h2>Stars: {movie.stars}</h2>
                 <p>{movie.description}</p>
-                <p className={styles.date}>Release Date: {movie._createdOn}</p>
+               
                 
                 <div className={styles.btnContainer}>
                     {userId === movie._ownerId

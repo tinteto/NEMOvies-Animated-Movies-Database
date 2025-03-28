@@ -45,12 +45,12 @@ export const useAllMovies = () => {
 //useRecentMovies - onMount
 export const useLatestMovies = () => {
     const [latestMovies, setLatest] = useState([]);
-
+ 
     useEffect(() => {
         const searchParams = new URLSearchParams({
             sortBy: '_createdOn desc',
             pageSize: 4,
-            select: '_id,img,title'
+            select: '_id,img,title,releaseDate'
 
         });
     

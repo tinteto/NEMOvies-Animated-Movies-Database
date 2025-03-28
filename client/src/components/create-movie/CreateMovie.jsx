@@ -25,8 +25,21 @@ redirectTo('/catalog');
 
     <form action={onSubmit}>
     <div className="title">
-        <label htmlFor="title">Title:</label>
-        <input type="text"  id="title" name="title" placeholder="Enter title..." />
+        <label htmlFor="title">Movie Title:</label>
+        <input type="text"  id="title" name="title" placeholder="Enter movie title..." />
+    </div>
+    <div className="releaseDate">
+        <label htmlFor="releaseDate">Release Date:</label>
+        <input type="text"  id="releaseDate" name="releaseDate" placeholder="Enter release date..." />
+    </div>
+    <div className="creator">
+        <label htmlFor="creators">Creators:</label>
+        <input type="text"  id="creators" name="creators" placeholder="Enter creators' names..." />
+    </div>
+
+    <div className="stars">
+        <label htmlFor="creator">Stars:</label>
+        <input type="text"  id="stars" name="stars" placeholder="Enter cast's names..." />
     </div>
 
     <div className="img">
@@ -44,17 +57,6 @@ redirectTo('/catalog');
         rows="5"
         ></textarea>
     </div>
-
-   {/*  <div className="steps">
-        <label htmlFor="steps">Instructions:</label>
-       <textarea 
-       type="text" 
-       name="steps" 
-       id="steps" 
-       rows="5" 
-       placeholder="Enter all info required..."
-       ></textarea>
-    </div> */}
 
     <div className="addMovieButtons">
         <button type="submit" className="create">Add Movie</button>
