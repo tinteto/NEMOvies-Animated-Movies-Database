@@ -99,39 +99,6 @@ export default function Header() {
     </div>
   </div>
 </header>
-        
-        
-        {/* 
-<header className={styles.appHeader}>
-    <div className={styles.appLogo}>
-        <Link to="/">App Name</Link>
-    </div>
-    <nav>
-        <ul>
-        <div className={styles.user}>
-            <div className={styles.home}>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/catalog">Catalog</Link></li>
-            <li><Link to="/create-movie">Create</Link></li>
-            <li><Link to="/about">About us</Link></li>
-           </div>
-           
-           <div className={styles.profile}>
-            <li ><Link to="#">User's profile</Link></li>
-            <li ><Link to="/logout">Logout</Link></li>
-           </div>
-        </div> 
-
-
-        <div className={styles.guest}>
-            <li><Link to="/login">Login</Link></li> 
-            <li><Link to="/register">Register</Link></li>  
-        </div>       
-        </ul>
-    </nav>
-</header>
-*/}
-
         </>
     )
 }
