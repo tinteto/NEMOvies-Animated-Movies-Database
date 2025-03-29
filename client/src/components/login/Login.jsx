@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router";
 import { useActionState, useContext } from "react";
 import { useLogin } from '../../apiHooks/authApiHooks';
 import { UserContext } from '../../contexts/userContext';
+import { toast } from 'react-toastify';
 
 export default function Login() {
 const redirectTo = useNavigate();
@@ -13,17 +14,19 @@ const { login } = useLogin();
 const loginHandler = async (prevousState, formData) => {
 const values = Object.fromEntries(formData); // values = {email: 'radost@abv.bg', psw: '12345'}
 
-
-const authData = await login(values.email, values.password);
-//{email: 'admin@abv.bg', username: 'Admin', _id: '60f0cf0b-34b0-4abd-9769-8c42f830dffc', accessToken: '07e04e59ed34d2ebe148be6488de3542a7efbf82bdc69f68ad2a2ff68a510fb1'}
-
+try {
+const authData = await login(values.email, values.password); //{email: 'admin@abv.bg', username: 'Admin', _id: '60f0cf0b-34b0-4abd-9769-8c42f830dffc', accessToken: '07e04e59ed34d2ebe148be6488de3542a7efbf82bdc69f68ad2a2ff68a510fb1'}
 
 userLoginHandler(authData); //при логване запазваме цялата информация, която ни връща сървъра
 
+toast.success('Successful login!');
+
 redirectTo('/');
 
-return values;
-
+} catch (error) {
+toast.error(error.message);
+}
+//return values;
 }
 
 //на useActionState подаваме функцията, която искаме да се изпълни и initial state-а, който първоначално ще бъде формичка със празни полета

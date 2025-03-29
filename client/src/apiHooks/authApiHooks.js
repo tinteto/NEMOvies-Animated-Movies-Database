@@ -17,6 +17,14 @@ export const useLogin = () => {
         body: JSON.stringify({email, password}),
 
     });
+
+    
+    if(!response.ok) {
+        const result = await response.json();
+        throw result;
+    }
+
+
     const result = await response.json();
     return result;
     }
@@ -38,6 +46,13 @@ export const useRegister = () => {
             },
             body: JSON.stringify({email, username, password}) //превръща данните в JSON обект
         });
+
+
+        if(!response.ok) {
+            const result = await response.json();
+            throw result;
+        }
+
         const result = await response.json();
         return result;
     }

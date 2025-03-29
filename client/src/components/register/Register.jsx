@@ -4,6 +4,7 @@ import styles from './Register.module.css'
 import { useRegister } from "../../apiHooks/authApiHooks";
 import { useActionState, useContext } from "react";
 import { UserContext } from "../../contexts/userContext";
+import { toast } from "react-toastify";
 
 export default function Register() {
 const redirectTo = useNavigate();
@@ -14,22 +15,26 @@ const registerHandler = async (previousState, formData) => {
 const values = Object.fromEntries(formData);
 const repeatPassword = formData.get('password-repeat');
 
-//TODO: error handling
-if(values.password !== repeatPassword) {
-    console.log('Password and Repeat Password do not match!');
 
+if(values.password !== repeatPassword) {
+    toast.warning('Password and Repeat Password do not match!');
     return;  
 }
 
-
+try {
 const authData = await register(values.email, values.username, values.password);
-console.log(authData);
+//console.log(authData);
 
 userLoginHandler(authData); //запазваме данните за user-a във state-a
 
+toast.success('Successful register!');
+
 redirectTo('/');
 
+} catch (error) {
+    toast.error(error.message);
 }
+};
 
 const [values, registerAction, isPending] = useActionState(registerHandler, {email: '', password: ''});
     

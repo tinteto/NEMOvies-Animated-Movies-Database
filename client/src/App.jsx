@@ -18,6 +18,7 @@ import Logout from './components/logout/Logout'
 import PageNotFound from './components/page-not-found/PageNotFound'
 import AuthGuard from './components/guards/authGuard'
 import UserGuard from './components/guards/userGuard'
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -64,6 +65,9 @@ const userLogoutHandler = () => {
 </main>
 
 <Footer />
+
+<ToastContainer />
+
 </>
 </UserContext.Provider>
   )

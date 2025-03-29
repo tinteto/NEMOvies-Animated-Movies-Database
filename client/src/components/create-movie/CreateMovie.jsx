@@ -1,6 +1,6 @@
-//TODO: try-catch
 import { useNavigate } from 'react-router';
 import { useCreateMovie } from '../../apiHooks/movieApiHooks';
+import { toast } from 'react-toastify';
 import styles from './CreateMovie.module.css'
 
 
@@ -13,13 +13,28 @@ const { createMovie } = useCreateMovie();
 const onSubmit = async (formData) => {
 const movieData = Object.fromEntries(formData);
 
-//изпращаме взетите данни до request функцията и тя прави заявка до сървъра
-const createdMovieData = await createMovie(movieData);
-
-redirectTo('/catalog');
+if( movieData.title === '' || 
+    movieData.releaseDate === '' || 
+    movieData.director === '' || 
+    movieData.img === '' || 
+    movieData.description === '') {
+    toast.warning('Missing fields!');
+    return;
 }
 
-    return(
+try {
+const createdMovieData = await createMovie(movieData);
+toast.success('Movie created successfully!');
+
+redirectTo('/catalog');
+
+} catch (error) {
+toast.error(error.message); //грешката, която идва от сървъра
+}
+};
+
+
+return(
 <>
 <div className={styles.container}>
 

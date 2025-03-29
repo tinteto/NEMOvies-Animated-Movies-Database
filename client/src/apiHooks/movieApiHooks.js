@@ -17,8 +17,13 @@ export const useCreateMovie = () => {
             body: JSON.stringify(movieData),
          });
       
+
+         if(!response.ok) {
+            const result = await response.json();
+            throw result;
+        }
+
          const result = await response.json();
-     
          return result;
     }
 
@@ -95,8 +100,13 @@ export const useEditMovie = () => {
             body: JSON.stringify({ ...movieData, _id: movieId }),
          });
       
+
+         if(!response.ok) {
+            const result = await response.json();
+            throw result;
+        }
+
          const result = await response.json();
-      
          return result;
         }
     return { editMovie }
@@ -115,6 +125,13 @@ export const useDeleteMovie = () => {
               'X-Authorization': accessToken,
            }
         })
+
+
+        if(!response.ok) {
+            const result = await response.json();
+            throw result;
+        }
+
           return response; 
     }
 

@@ -1,8 +1,8 @@
-//TODO: try-catch
 import styles from './EditMovie.module.css'
 
 import { useNavigate, useParams } from 'react-router'
 import { useEditMovie, useOneMovie } from '../../apiHooks/movieApiHooks'
+import { toast } from 'react-toastify';
 
 export default function EditMovie() {
 const redirectTo = useNavigate();
@@ -15,13 +15,29 @@ const onFormEdit = async (formData) => {
     //при попълване на ъпдейтнатите данни ги вземаме и ги пращаме на сървъра
     const movieData = Object.fromEntries(formData);
 
-    await editMovie(movieId, movieData);
+if( movieData.title === '' || 
+    movieData.releaseDate === '' || 
+    movieData.director === '' || 
+    movieData.img === '' || 
+    movieData.description === '') {
+    toast.warning('Missing fields!');
 
-    redirectTo(`/catalog/${movieId}/details`);
+ return;
 }
 
 
-    return(
+try {
+    await editMovie(movieId, movieData);
+    toast.success('Movie edited successfully!');
+
+    redirectTo(`/catalog/${movieId}/details`);
+} catch (error) {
+    toast.error(error.message);
+}
+};
+
+
+return(
 <>
 <div className={styles.container}>
 

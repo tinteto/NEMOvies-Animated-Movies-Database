@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router';
 import { UserContext } from '../../contexts/userContext';
 import { useDeleteMovie, useOneMovie } from '../../apiHooks/movieApiHooks';
 import styles from './MovieDetails.module.css';
+import { toast } from 'react-toastify';
 
 
 export default function MovieDetails() {
@@ -21,10 +22,16 @@ export default function MovieDetails() {
         return;
     }
 
-    await deleteMovie(movieId);
 
-    redirectTo('/catalog');
+    try {
+        await deleteMovie(movieId);
+        toast.success('Movie deleted successfully!')
+    
+        redirectTo('/catalog');
+    } catch (error) {
+        toast.error(error.message);
     }
+    };
 
 
     return(
