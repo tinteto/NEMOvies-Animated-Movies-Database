@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../contexts/userContext";
 
 const apiUrl = 'http://localhost:3030';
@@ -62,6 +62,9 @@ export const useRegister = () => {
     }
 }
 
+
+
+
 //useLogout - on Mount
 export const useLogout = () => {
     const { accessToken, userLogoutHandler } = useContext(UserContext);
@@ -76,10 +79,35 @@ export const useLogout = () => {
             headers: {
             'X-Authorization': accessToken,
             }
-        }).then(userLogoutHandler) //при успешно logout-ване извикай userLogoutHandler
+        }).finally(userLogoutHandler) //при успешно logout-ване извикай userLogoutHandler
     }, [accessToken, userLogoutHandler]);
 
  return {
     isLoggedOut: !!accessToken,
  };
 }
+
+
+
+// useUserProfile - onMount
+export const useUserProfile = () => {
+    const [userProfile, setUserProfile] = useState({});
+    const { accessToken } = useContext(UserContext);
+
+    useEffect(() => {
+      fetch(`${apiUrl}/users/me`, {
+            method: 'GET',
+            headers: {
+            'X-Authorization': accessToken,
+            }
+        })
+        .then(response => response.json())
+        .then(result => {
+            setUserProfile(result)
+        })
+    }, [accessToken]);
+
+    return { userProfile };
+}
+
+

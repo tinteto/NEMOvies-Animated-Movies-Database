@@ -1,6 +1,6 @@
 import styles from './EditMovie.module.css'
 
-import { useNavigate, useParams } from 'react-router'
+import { Link, useNavigate, useParams } from 'react-router'
 import { useEditMovie, useOneMovie } from '../../apiHooks/movieApiHooks'
 import { toast } from 'react-toastify';
 
@@ -79,7 +79,7 @@ return(
 
     <div className="editMovieButtons">
         <button  type="submit" className="edit">Edit Movie</button> 
-        <button className="cancel">Cancel</button>
+        <Link to={`/catalog/${movieId}/details`} className="cancel">Cancel</Link>
     </div>
 
     </form>

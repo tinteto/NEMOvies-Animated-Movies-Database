@@ -3,11 +3,13 @@ import { Routes, Route } from 'react-router'
 import { useState } from 'react'
 import { UserContext } from './contexts/userContext'
 import usePersistedState from './apiHooks/usePersistedState'
+import { ToastContainer } from 'react-toastify';
 
 import Header from './components/header/Header'
 import Home from './components/home/Home'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
+import UserProfile from './components/userProfile/UserProfile'
 import CreateMovie from './components/create-movie/CreateMovie'
 import Catalog from './components/catalog/Catalog'
 import MovieDetails from './components/movie-details/MovieDetails'
@@ -18,9 +20,6 @@ import Logout from './components/logout/Logout'
 import PageNotFound from './components/page-not-found/PageNotFound'
 import AuthGuard from './components/guards/authGuard'
 import UserGuard from './components/guards/userGuard'
-import { ToastContainer } from 'react-toastify';
-
-
 
 
 function App() {
@@ -57,6 +56,7 @@ const userLogoutHandler = () => {
 
 
   <Route element={<AuthGuard />}>
+    <Route path="/my-profile" element={<UserProfile />}/>
     <Route path="/create-movie" element={<CreateMovie />} />
     <Route path="catalog/:movieId/edit" element={<EditMovie />} />
     <Route path="/logout" element={<Logout />} />

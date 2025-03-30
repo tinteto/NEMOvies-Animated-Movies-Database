@@ -1,0 +1,181 @@
+/* Profile Container */
+.profileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+}
+
+/* Profile Card */
+.profileCard {
+  background-color: #f0f4f8; /* Light background */
+  padding: 30px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profileCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Image */
+.profileCard img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #fb923c; /* Orange border for the profile image */
+}
+
+/* Profile Text */
+.profileCard p {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.profileCard h2 {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.profileCard h3 {
+  font-size: 1.2rem;
+  color: #fb923c; /* Orange color for the email */
+  margin: 8px 0;
+}
+
+/* Edit Profile Button */
+.editProfileBtn {
+  background-color: #fb923c; /* Orange background */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.editProfileBtn:hover {
+  background-color: #374151; /* Darker shade on hover */
+}
+
+
+/*
+.profileCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+  }
+
+.profileCard p {
+  font-size: 20px;
+  color: rgb(83, 82, 82);
+  padding: 15px;
+}
+
+.flex {
+  display: flex;
+}
+  
+.aboutMe {
+  color: grey;
+  font-size: 18px;
+}
+  
+
+.editProfileBtn {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+  
+
+  
+.editProfileBtn:hover, a:hover {
+    opacity: 0.7;
+}
+
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+.editProfileBtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+.editProfileBtn:hover {
+  opacity: 0.8;
+}
+
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+*/
+/*
+
+.container {
+  padding: 30px;
+}
+
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+} 
+*/
+  

@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { useCreateMovie } from '../../apiHooks/movieApiHooks';
 import { toast } from 'react-toastify';
 import styles from './CreateMovie.module.css'
@@ -75,7 +75,7 @@ return(
 
     <div className="addMovieButtons">
         <button type="submit" className="create">Add Movie</button>
-        <button className="cancel">Cancel</button>
+        <Link to={`/catalog`} className="cancel">Cancel</Link>
     </div>
 
     </form>
