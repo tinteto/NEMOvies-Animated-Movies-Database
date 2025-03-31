@@ -78,8 +78,8 @@ return(
     </div>
 
     <div className="editMovieButtons">
-        <button  type="submit" className="edit">Edit Movie</button> 
-        <Link to={`/catalog/${movieId}/details`} className="cancel">Cancel</Link>
+        <button  type="submit" className={styles.edit}>Edit Movie</button> 
+        <Link to={`/catalog/${movieId}/details`} className={styles.goBack}>Go Back</Link>
     </div>
 
     </form>

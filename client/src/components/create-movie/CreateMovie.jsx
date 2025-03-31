@@ -74,8 +74,8 @@ return(
     </div>
 
     <div className="addMovieButtons">
-        <button type="submit" className="create">Add Movie</button>
-        <Link to={`/catalog`} className="cancel">Cancel</Link>
+        <button type="submit" className={styles.create}>Add Movie</button>
+        <Link to={`/catalog`} className={styles.goBack}>Go Back</Link>
     </div>
 
     </form>

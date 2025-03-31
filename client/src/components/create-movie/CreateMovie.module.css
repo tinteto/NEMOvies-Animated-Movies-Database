@@ -1,63 +1,85 @@
-/*! Create */
-
-  /* Add padding to containers */
-  .container {
-    margin: 0 auto;
-    max-width: 40%;
-    padding: 30px;
+.container {
+  margin: 0 auto;
+  max-width: 60%;
+  margin-bottom: 20px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px; 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Bordered form */
+
 form {
-    border: 3px solid #f1f1f1;
-    padding: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  border-radius: 8px;
+}
 
+
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #fb923c;
+  box-shadow: 0 0 8px rgba(251, 146, 60, 0.3);
+  outline: none;
+}
+
+
+.create,
+.goBack {
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #fb923c;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.create:hover,
+.goBack:hover {
+  background-color: #374151;
+}
+
+
+.create:active,
+.goBack:active {
+  background-color: #fb923c;
+}
+
+/* Mobile responsiveness: adjusting layout for small screens */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 25px;
   }
-  
-  /* Full-width inputs */
-  input[type=text], input[type=password], textarea[type=text] {
+
+  .create,
+  .goBack {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
   }
-
-
-
-  /* Set a style for all buttons */
-button {
-    background-color: #fb923c;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  /* Add a hover effect for buttons */
-  button:hover {
-    background-color: #374151;
-  }
-  
-  /* Extra style for the cancel button (red) */
-  .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-  }
-
-  /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
-    span.psw {
-      display: block;
-      float: none;
-    }
-    .cancelbtn {
-      width: 100%;
-    }
-  }
-
+}
 

@@ -1,57 +1,63 @@
-/*! Register Form */
-* {box-sizing: border-box}
-
+/*! Register Form  box-sizing*/
 .registerContainer {
-  max-width: 40%;
+  max-width: 50%;
   margin: 0 auto;
   padding: 30px;
 }
-/* Full-width input fields */
-  input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
+
+.container {
+  padding: 16px;
 }
 
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #fb923c;
+  box-shadow: 0 0 8px rgba(251, 146, 60, 0.3);
   outline: none;
 }
 
 hr {
   border: 1px solid #f1f1f1;
+  margin-top: 5px;
   margin-bottom: 25px;
 }
 
-/* Set a style for all buttons */
-.signupbtn {
+
+.registerBtn {
+  margin: 10px 0px;
+  display: inline-block;
+  width: 100%;
+  padding: 14px 20px;
   background-color: #fb923c;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+  font-size: 1rem;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
+
+.registerBtn:hover {
   background-color: #374151;
 }
 
-
-.signupbtn {
-  float: left;
-  width: 100%;
-}
-
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-}
 
 /* Clear floats */
 .clearfix::after {
@@ -59,16 +65,20 @@ button:hover {
   clear: both;
   display: table;
 }
-p.fillIn {
-  padding: 5px 2px;
+
+.fillIn {
+  font-weight: bold;
+  color: #fb923c;
 }
 
 p.signInHere {
+  font-weight: bold;
   padding: 10px 2px;
 }
 
 p.signInHere a {
-  color:#fb923c;
+  font-weight: bold;
+  color: #fb923c;
 }
 
 /* Change styles for signup button on extra small screens */
@@ -77,5 +87,3 @@ p.signInHere a {
     width: 100%;
   }
 }
-
-

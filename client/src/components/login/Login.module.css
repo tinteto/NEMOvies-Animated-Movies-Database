@@ -1,78 +1,86 @@
-/*! Login Form */
-
-/* Bordered form */
-
 .loginContainer {
-    max-width: 40%;
-    margin: 0 auto;
-    padding: 30px;
-   }
-   
-   
-   form {
-       border: 3px solid #f1f1f1;
-       padding: 4px;
-     }
-     
-     /* Full-width inputs */
-     input[type=text], input[type=password] {
-       width: 100%;
-       padding: 12px 20px;
-       margin: 8px 0;
-       display: inline-block;
-       border: 1px solid #ccc;
-       box-sizing: border-box;
-     }
-   
-     /* Set a style for all buttons */
-   .loginBtn {
-       background-color: #fb923c;
-       color: white;
-       padding: 14px 20px;
-       margin: 8px 0;
-       border: none;
-       cursor: pointer;
-       width: 100%;
-     }
-     
-     /* Add a hover effect for buttons */
-     button:hover {
-      background-color: #374151;
-     }
-     
-   
-     /* Center the avatar image inside this container */
-   .imgcontainer {
-       text-align: center;
-       margin: 24px 0 12px 0;
-     }
-     
-     /* Avatar image */
-     img.avatar {
-       width: 60%;
-       border-radius: 50%;
-     }
-     
-     /* Add padding to containers */
-     .container {
-       padding: 16px;
-     }
-   
-     p.registerHere {
-       padding: 10px 2px;
-     }
-   
-     p.registerHere a {
-       color:#fb923c;
-     }
-   
-     /* Change styles for span and cancel button on extra small screens */
-     @media screen and (max-width: 300px) {
-       span.psw {
-         display: block;
-         float: none;
-       }
-     }
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.container {
+  padding: 16px;
+}
 
 
+form {
+  border: 3px solid #f1f1f1;
+  padding: 4px;
+}
 
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #fb923c;
+  box-shadow: 0 0 8px rgba(251, 146, 60, 0.3);
+  outline: none;
+}
+
+
+.loginBtn {
+  margin: 10px 0px;
+  display: inline-block;
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #fb923c;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.loginBtn:hover {
+  background-color: #374151;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 60%;
+  border-radius: 50%;
+}
+
+
+p.registerHere {
+  font-weight: bold;
+  padding: 10px 2px;
+}
+
+p.registerHere a {
+  font-weight: bold;
+  color: #fb923c;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+}
