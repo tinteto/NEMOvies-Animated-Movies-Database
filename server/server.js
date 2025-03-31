@@ -1512,7 +1512,107 @@
     			img: "https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg",
     			_createdOn: 1614935268135,
     			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
-    		}
+    		},
+            "358270c0-de60-40c1-8f49-7cae143acf62": {
+                title: "The Lion King",
+                releaseDate: "1994",
+                creators: "Irene Mecchi, Jonathan Roberts, Linda Woolverton",
+                stars: " Matthew Broderick, Jeremy Irons, James Earl Jones",
+                img: "\\images\\The_Lion_King_poster.jpg",
+                description: "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
+                _id: "358270c0-de60-40c1-8f49-7cae143acf62",
+                _createdOn: 1743396009549,
+                _ownerId: "f079549b-d998-4c4f-9778-70c5ca2516b2",
+                _updatedOn: 1743396021670
+            },
+            "9676d5ba-5a27-4006-a873-29d7c7d3aacc": {
+                _ownerId: "f079549b-d998-4c4f-9778-70c5ca2516b2",
+                title: "The Little Mermaid",
+                releaseDate: "1989",
+                creators: "Ron Clements, John Musker",
+                stars: "Jodi Benson, Samuel E. Wright",
+                img: "\\images\\The_Little_Mermaid_(Official_1989_Film_Poster).png",
+                description: "A mermaid princess makes a Faustian bargain in an attempt to become human and win a prince's love.",
+                _createdOn: 1743396199978,
+                _id: "9676d5ba-5a27-4006-a873-29d7c7d3aacc"
+            },
+            "314bd417-6449-4713-8aa9-8f6807d97c60": {
+                _ownerId: "12286a29-f286-4827-9607-ee809644f15a",
+                title: "Beauty and the Beast",
+                releaseDate: "1991",
+                creators: "Linda Woolverton, Brenda Chapman, Chris Sanders",
+                stars: "Paige O'Hara, Robby Benson, Jesse Corti",
+                img: "\\images\\Beauty_and_the_Beast_(1991_film)_poster.jpg",
+                description: "A prince cursed to spend his days as a hideous monster sets out to regain his humanity by earning a young woman's love.",
+                _createdOn: 1743396648875,
+                _id: "314bd417-6449-4713-8aa9-8f6807d97c60"
+            },
+           "398531ff-8294-406f-8496-395117003403": {
+                _ownerId: "12286a29-f286-4827-9607-ee809644f15a",
+                title: "Finding Nemo",
+                releaseDate: "2003",
+                creators: "Andrew Stanton, Bob Peterson, David Reynolds",
+                stars: " Albert Brooks, Ellen DeGeneres, Alexander Gould",
+                img: "\\images\\Finding_Nemo.jpg",
+                description: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.",
+                _createdOn: 1743396764345,
+                _id: "398531ff-8294-406f-8496-395117003403"
+            },
+           "6759285c-0a47-41fe-8aea-10c953537526": {
+                _ownerId: "12286a29-f286-4827-9607-ee809644f15a",
+                title: "Frozen",
+                releaseDate: "2013",
+                creators: "Jennifer Lee, Hans Christian Andersen, Chris Buck",
+                stars: "Kristen Bell, Idina Menzel, Jonathan Groff",
+                img: "\\images\\Frozen_(2013_film)_poster.jpg",
+                description: "Fearless optimist Anna teams up with rugged mountain man Kristoff and his loyal reindeer Sven in an epic journey to find Anna's sister Elsa, whose icy powers have trapped the kingdom of Arendelle in eternal winter.",
+                _createdOn: 1743396939677,
+                _id: "6759285c-0a47-41fe-8aea-10c953537526"
+            },
+           "6a5cfdf9-7177-4946-afb0-c9216fac1072": {
+               _ownerId: "12286a29-f286-4827-9607-ee809644f15a",
+                title: "Tangled",
+                releaseDate: "2010",
+                creators: "Dan Fogelman, Jacob Grimm, Wilhelm Grimm",
+                stars: "Mandy Moore, Zachary Levy, Donna Murphy",
+                img: "\\images\\Tangled_poster.jpg",
+                description: "The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief has stumbled upon her, she is about to discover the world for the first time, and who she really is.",
+                _createdOn: 1743397035154,
+                _id: "6a5cfdf9-7177-4946-afb0-c9216fac1072",
+            },
+            "4f29cd51-190b-4352-b541-f5d48154c973": {
+                _ownerId: "24957e98-af87-4122-b389-9aafda2ef6bd",
+                title: "Toy Story",
+                releaseDate: "1995",
+                creators: "John Lasseter, Pete Docter, Andrew Stanton",
+                stars: "Tom Hanks, Tim Allen, Don Rickles",
+                img: "\\images\\Toy_Story.jpg",
+                description: "A cowboy doll is profoundly threatened and jealous when a new spaceman action figure supplants him as top toy in a boy's bedroom.",
+                _createdOn: 1743423272729,
+                _id: "4f29cd51-190b-4352-b541-f5d48154c973"
+            },
+            "02124884-6585-4d4a-9804-e3fe697f93ac": {
+                _ownerId: "24957e98-af87-4122-b389-9aafda2ef6bd",
+                title: "Coco",
+                releaseDate: "2017",
+                creators: "Lee Unkrich, Jason Katz, Matthew Aldrich",
+                stars: "Anthony Gonzalez, Gael García Bernal, Benjamin Bratt",
+                img: "\\images\\Coco_(2017_film)_poster.jpg",
+                description: "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.",
+                _createdOn: 1743425766907,
+                _id: "02124884-6585-4d4a-9804-e3fe697f93ac"
+            },
+            "218ed82b-218c-4ac5-ae60-c5f7fabd2f86": {
+                _ownerId: "24957e98-af87-4122-b389-9aafda2ef6bd",
+                title: "Encanto",
+                releaseDate: "2021",
+                creators: "Jared Bush, Byron Howard, Charise Castro Smith",
+                stars: "Stephanie Beatriz, María Cecilia Botero, John Leguizamo",
+                img: "\\images\\Encanto_poster.jpg",
+                description: "An extraordinary family, the Madrigals, live hidden in the mountains of Colombia, in a magical house called an Encanto. The magic of the Encanto has blessed every child in the family with a unique gift - every child except one, Mirabel.",
+                _createdOn: 1743425952253,
+                _id: "218ed82b-218c-4ac5-ae60-c5f7fabd2f86"
+            }
     	},
     	likes: {
     	},
