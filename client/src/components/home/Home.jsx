@@ -15,9 +15,11 @@ export default function Home() {
       <p>Welcome </p>
     </div> 
 
-    <div className={styles.homePage}>
-          <h1>Latest Movie Adventures</h1>
+    <div className={styles.latest}>
+      <h1>Latest Movies</h1>
+    </div>
 
+    <div className={styles.homePage}>
           {latestMovies.map(movie => (
           <div className={styles.movie} key={movie._id}>
           <div className={styles.img}>
@@ -32,7 +34,9 @@ export default function Home() {
           </div>
           ))}
 
+      <div className="noMovies">
         {latestMovies.length === 0 &&  <p className={styles.noMovies}>No adventures yet!</p>}
+      </div>
             
     </div> 
   
