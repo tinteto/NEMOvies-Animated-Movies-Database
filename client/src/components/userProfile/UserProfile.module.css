@@ -1,72 +1,130 @@
-/* Profile Container */
+
 .profileContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-
+  margin-top: 50px;
 }
 
-/* Profile Card */
+
 .profileCard {
-  background-color: #f0f4f8; 
+  width: 30%;
+  margin-bottom: 40px;
   padding: 30px;
-  width: 350px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  border-radius: 12px; 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
 }
 
-.profileCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
 
-/* Profile Image */
 .profileCard img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%; 
+  object-fit: cover; 
   margin-bottom: 20px;
-  border: 3px solid #fb923c; 
 }
 
-/* Profile Text */
-.profileCard p {
-  font-size: 14px;
-  color: #555;
-  margin: 8px 0;
-}
 
 .profileCard h2 {
-  font-size: 1.5rem;
+  font-size: 30px;
   color: #333;
-  font-weight: bold;
   margin: 10px 0;
 }
 
 .profileCard h3 {
-  font-size: 1.2rem;
-  color: #fb923c; 
-  margin: 8px 0;
+  font-size: 20px;
+  color: #555;
+  margin: 10px 0;
 }
 
-/* Edit Profile Button */
+.profileCard p {
+  font-size: 1rem;
+  color: #777;
+}
+
+
 .editProfileBtn {
-  background-color: #fb923c; 
-  color: white;
-  border: none;
+  display: inline-block;
   padding: 12px 20px;
+  background-color: #fb923c;
+  color: white;
   font-size: 1rem;
   border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+
 .editProfileBtn:hover {
-  background-color: #374151; 
+  background-color: #374151;
 }
+
+
+.editProfileBtn:active {
+  background-color: #fb923c;
+}
+
+
+
+.userCatalogPage {
+  margin: 0 auto;
+  max-width: 90%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+.userCatalogPage h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #374151;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border-left: 5px solid #fb923c; 
+}
+
+
+.movies {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.noMovies {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.noMovies h3 {
+  margin-top: 20px;
+  font-weight: normal;
+}
+
+
+
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .profileCard {
+    width: 90%; 
+    padding: 20px;
+  }
+
+  .profileCard img {
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
 
