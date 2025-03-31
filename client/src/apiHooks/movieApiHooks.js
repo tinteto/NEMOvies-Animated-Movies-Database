@@ -47,15 +47,16 @@ export const useAllMovies = () => {
   return { movies };
 };
 
-//useRecentMovies - onMount
+//useRecentMovies - onMount - advanced retieval - sorting and selecting properties
 export const useLatestMovies = () => {
     const [latestMovies, setLatest] = useState([]);
  
+
     useEffect(() => {
         const searchParams = new URLSearchParams({
             sortBy: '_createdOn desc',
-            pageSize: 4,
-            select: '_id,img,title,releaseDate'
+            pageSize: 8,
+            select: '_id,img,title,releaseDate' //selecting properties
 
         });
     
@@ -67,6 +68,20 @@ export const useLatestMovies = () => {
 
 return { latestMovies };
 
+}
+
+export const useUserMovies = () => {
+const [userMovies, setUserMovies] = useState([]);
+const { _id: userId } = useContext(UserContext);
+useEffect(() => {
+fetch(`http://localhost:3030/data/movies?where=_ownerId%3D%22${userId}%22`)
+.then(response => response.json())
+.then(result => 
+    setUserMovies(result)
+)
+}, []);
+
+return { userMovies };
 }
 
 
