@@ -23,7 +23,7 @@ if(values.password !== repeatPassword) {
 
 try {
 const authData = await register(values.email, values.username, values.password);
-//console.log(authData);
+console.log(authData);
 
 userLoginHandler(authData); //запазваме данните за user-a във state-a
 
@@ -44,31 +44,23 @@ return (
 
         <form action={registerAction}>
              <div className={styles.container}>
-             <h1>Sign Up</h1>
-             <p className="fillIn">Please fill in this form to create an account.</p>
+             <p className={styles.fillIn}>Please fill in this form to create an account.</p>
              <hr/>
   
-
              <label htmlFor="username"><b>Username</b></label>
              <input type="text" placeholder="Enter Username" name="username" />
    
-
- 
-
              <label htmlFor="email"><b>Email</b></label>
              <input type="text" placeholder="Enter Email" name="email" />
-
 
              <label htmlFor="psw"><b>Password</b></label>
              <input type="password" placeholder="Enter Password" name="password" />
 
-
              <label htmlFor="psw-repeat"><b>Repeat Password</b></label>
              <input type="password" placeholder="Repeat Password" name="password-repeat" />
 
-
-             <div className={styles.clearfix}>
-                <button type="submit" className={styles.signupbtn} disabled={isPending} >Sign Up</button>
+             <div className="clearFix">
+                <button type="submit" className={styles.registerBtn} disabled={isPending} >Register</button>
              </div>
 
              <p className={styles.signInHere}>You already have an account? <Link to="/login">Sign in here!</Link></p>

@@ -16,10 +16,10 @@ const { _id: userId, username } = useContext(UserContext);
 
 <section className={styles.profileContainer}>
     <div className={styles.profileCard}>
-        <img src="\images\baby+fish.jpg" alt="ProfilePicture" />
+        <img src="\images\bastien-nvs-Lmd-CpZOGWc-unsplash.jpg" alt="ProfilePicture" />
     <div className={styles.userDetails}>
       <div className={styles.userName}>
-        <p>Name:</p>
+        <p>My username:</p>
         <h2>{userProfile.username}</h2>
         </div>
         <div className={styles.userEmail}>
