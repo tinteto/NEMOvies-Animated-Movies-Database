@@ -4,6 +4,58 @@
   padding: 30px 20px;
 }
 
+.headings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.welcomeMsg h1 {
+  font-size: 50px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color:  #fb923c;
+}
+
+.welcomeMsg h3 {
+  margin-bottom: 40px;
+  font-family: Helvetica;
+  font-size: 20px;
+  color: #848383;
+}
+
+
+.loginBtn {
+  padding: 10px 20px;
+  background-color: #374151;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learnMoreBtn {
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 30px;
+  color: #fb923c;
+}
+
+
+.homeImg {
+  max-width: 50%;
+  height: auto;
+  overflow: hidden;
+}
+
+.homeImg img {
+  width: 100%;
+  height: 600px; /* You can adjust this height */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 
 .latest h1 {
   text-transform: uppercase;
@@ -16,40 +68,14 @@
 }
 
 
-.headings {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.headings h1 {
-  font-size: 3rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.headings p {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-
-.homePage h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  color: #333;
-  margin-bottom: 40px;
-}
-
-
 .homePage {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   justify-items: center;
 }
+
+
 
 /* Movie Card */
 .movie {
@@ -110,9 +136,15 @@ h6 {
 }
 
 
+/* No Movies Section */
 .noMovies {
-  font-size: 1.2rem;
-  color: #777;
-  text-align: center;
   margin-top: 30px;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.noMovies h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fb923c;
 }

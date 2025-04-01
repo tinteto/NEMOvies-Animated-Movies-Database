@@ -1,3 +1,4 @@
+//TODO Welcome
 import styles from './Home.module.css'
 import { Link } from "react-router"
 import { useLatestMovies } from "../../apiHooks/movieApiHooks"
@@ -11,9 +12,17 @@ export default function Home() {
   <section className={styles.container}>
   
     <div className={styles.headings}>
-      <h1>Welcome!</h1>
-      <h3>Dive in the limitless world of Disney movies adventures!</h3>
-      <p>Enjoy in moderation!</p>
+    <div className={styles.welcomeMsg}>
+      <h1>Welcome to NEMOvies!</h1>
+      <h3>Dive into the limitless world of movie adventures! Enjoy in moderation!</h3>
+          <div className="homeBtns">
+              <Link to="/login" className={styles.loginBtn}>Get started</Link>
+              <Link to="/about" className={styles.learnMoreBtn}>Learn more → </Link>
+          </div>
+    </div>
+    <div className={styles.homeImg}>
+      <img src="\images\brian-mcgowan-zmkZWG6r4dw-unsplash.jpg" alt="HomeImage" />
+    </div>
     </div> 
 
     <div className={styles.latest}>
@@ -35,8 +44,8 @@ export default function Home() {
           </div>
           ))}
 
-      <div className="noMovies">
-        {latestMovies.length === 0 &&  <p className={styles.noMovies}>No adventures yet!</p>}
+      <div className={styles.noMovies}>
+        {latestMovies.length === 0 &&  <h3 className="noMovies">No movies yet!</h3>}
       </div>
             
     </div> 
