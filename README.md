@@ -53,3 +53,8 @@ Not logged-in users cannot access logout, they are redirected to Login page.
 
 Regards, Radostina Georgieva
 
+Disclaimer:
+All trademarks, logos, and content are the property of their respective owners. 
+We do not claim ownership of any copyrighted content featured in this app. 
+This app is intended for non-commercial use only. All movie data is provided for educational or informational purposes.
+
