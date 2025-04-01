@@ -3,13 +3,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin: 10px 0px;
+  
 }
 
 
 .profileCard {
   width: 30%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   padding: 30px;
   background-color: #ffffff;
   border-radius: 12px; 
@@ -17,10 +18,9 @@
   text-align: center; 
 }
 
-
 .profileCard img {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%; 
   object-fit: cover; 
   margin-bottom: 20px;
@@ -28,15 +28,16 @@
 
 
 .profileCard h2 {
-  font-size: 30px;
-  color: #333;
+  font-size: 1.8rem;
+  color:  #fb923c;
   margin: 10px 0;
+  font-weight: bold;
 }
 
 .profileCard h3 {
-  font-size: 20px;
+  font-size: 1.1rem;
   color: #555;
-  margin: 10px 0;
+  font-weight: bold;
 }
 
 .profileCard p {
@@ -45,32 +46,15 @@
 }
 
 
-.editProfileBtn {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: #fb923c;
-  color: white;
-  font-size: 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.userName, .userEmail {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
 }
 
 
-.editProfileBtn:hover {
-  background-color: #374151;
-}
-
-
-.editProfileBtn:active {
-  background-color: #fb923c;
-}
-
-
-
+/* User Movies */
 .userCatalogPage {
   margin: 0 auto;
   max-width: 90%;
@@ -83,6 +67,7 @@
 }
 
 .userCatalogPage h1 {
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 1.5rem;
   color: #374151;

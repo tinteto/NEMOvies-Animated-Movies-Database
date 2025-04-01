@@ -17,12 +17,16 @@ const { _id: userId, username } = useContext(UserContext);
 <section className={styles.profileContainer}>
     <div className={styles.profileCard}>
         <img src="\images\baby+fish.jpg" alt="ProfilePicture" />
-        <p>Name: </p>
+    <div className={styles.userDetails}>
+      <div className={styles.userName}>
+        <p>Name:</p>
         <h2>{userProfile.username}</h2>
-        <p>Contact me here:</p>
+        </div>
+        <div className={styles.userEmail}>
+        <p>My contact information:</p>
         <h3>{userProfile.email}</h3>
-
-     <Link to={`/my-profile/edit`} className={styles.editProfileBtn}>Edit profile</Link>
+       </div>
+      </div>
     </div>
 </section>
 

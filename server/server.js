@@ -1612,6 +1612,17 @@
                 description: "An extraordinary family, the Madrigals, live hidden in the mountains of Colombia, in a magical house called an Encanto. The magic of the Encanto has blessed every child in the family with a unique gift - every child except one, Mirabel.",
                 _createdOn: 1743425952253,
                 _id: "218ed82b-218c-4ac5-ae60-c5f7fabd2f86"
+            },
+            "c179e3ef-be16-4723-9ea3-71929b2d7619": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                title: "Kung Fu Panda",
+                releaseDate: "2008",
+                creators: "Jonathan Aibel, Glenn Berger, Ethan Reiff",
+                stars: "Jack Black, Ian McShane, Angelina Jolie",
+                img: "\\images\\Kungfupanda.jpg",
+                description: "To everyone's surprise, including his own, Po, an overweight, clumsy panda, is chosen as protector of the Valley of Peace. His suitability will soon be tested as the valley's arch-enemy is on his way.",
+                _createdOn: 1743428574450,
+                _id: "c179e3ef-be16-4723-9ea3-71929b2d7619"
             }
     	},
     	likes: {

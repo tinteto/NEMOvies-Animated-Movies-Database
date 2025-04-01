@@ -11,8 +11,9 @@ export default function Home() {
   <section className={styles.container}>
   
     <div className={styles.headings}>
-      <h1>Welcome</h1>
-      <p>Welcome </p>
+      <h1>Welcome!</h1>
+      <h3>Dive in the limitless world of Disney movies adventures!</h3>
+      <p>Enjoy in moderation!</p>
     </div> 
 
     <div className={styles.latest}>

@@ -5,19 +5,21 @@ export default function About() {
     return (
         <>
   <div className={styles.aboutSection}>
-    <h1>Some text here</h1>
-    <p>Some text here </p>
-    <p>Some text here</p>
+    <h1>About us</h1>
+    <h2>Hello little movie lover! Welcome to the vast world of animated adventures!</h2>
+    <p>We know <strong>Elsa and Anna, Nemo and Dory, Timon and Pumba</strong> and many more are your favourite characters in the world!</p>
+    <p>We are here to help you get to know their story better!</p>
+    <p><strong>Still, don't forget the games with friends!</strong></p>
   </div>
   
   <div className={styles.aboutRow}>
     <div className={styles.aboutColumn}>
       <div className={styles.aboutCard}>
-        <img src="./../../assets/caju-gomes-QDq3YliZg48-unsplash.jpg" alt="teamMemberPhoto" />
+        <img src="\images\Minnie_Mouse_Duckipedia.png" alt="teamMemberPhoto" />
         <div className={styles.aboutContainer}>
           <h2>Radostina Georgieva</h2>
           <p className={styles.title}>Founder</p>
-          <p className={styles.keenEye}>Some text here</p>
+          <p className={styles.keenEye}>Passionate Disney movies' lover!</p>
           <p className={styles.email}>radostina@example.com</p>
         </div>
       </div>
@@ -25,11 +27,11 @@ export default function About() {
   
     <div className={styles.aboutColumn}>
       <div className={styles.aboutCard}>
-        <img src="./../../assets/s-l-M3VeZnz3cLQ-unsplash.jpg" alt="teamMemberPhoto" />
+        <img src="\images\Mickey-Mouse.png" alt="teamMemberPhoto" />
         <div className={styles.aboutContainer}>
           <h2>Dimitar Georgiev</h2>
           <p className={styles.title}>Designer</p>
-          <p className={styles.keenEye}>Some text here</p>
+          <p className={styles.keenEye}>I am just here to help!</p>
           <p className={styles.email}>dimitar@example.com</p>
         </div>
       </div>

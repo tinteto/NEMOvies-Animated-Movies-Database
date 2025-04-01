@@ -1,30 +1,43 @@
 
-/* About Section Styling */
 .aboutSection {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #fff;
-  margin-bottom: 30px;
+  text-align: center; 
+  max-width: 80%; 
+  margin: 0 auto;
+  padding: 80px; 
 }
 
 .aboutSection h1 {
-  font-size: 2.5rem;
+  font-size: 60px;
+  font-family: 'Roboto', sans-serif; 
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 20px; 
+  font-weight: bold;
+}
+
+.aboutSection h2 {
+  font-size: 25px; 
+  font-family: 'Roboto', sans-serif; 
+  color: #fb923c;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .aboutSection p {
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
+  font-size: 18px; 
+  line-height: 1;
+  color: #555; 
+  margin-bottom: 20px; 
 }
+
+.aboutSection p:last-child {
+  margin-bottom: 0;
+}
+
 
 /* About Row */
 .aboutRow {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 20px;
   flex-wrap: wrap; 
   padding: 20px;
@@ -34,7 +47,7 @@
 .aboutColumn {
   flex: 1;
   min-width: 250px;
-  max-width: 500px;
+  max-width: 400px;
   padding: 10px;
 }
 
@@ -60,7 +73,7 @@
 .aboutCard img {
   width: 100%;
   height: 250px;
-  object-fit: cover;
+object-fit: contain;
   border-bottom: 3px solid #f4f4f4;
 }
 

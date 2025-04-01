@@ -18,8 +18,7 @@ export default function Footer() {
         </div>
 
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa
-          cum itaque neque.
+        NEMOvies Children's Animated Movies Database. 
         </p>
       </div>
 
@@ -31,15 +30,7 @@ export default function Footer() {
         </li>
 
         <li>
-          <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Services </a>
-        </li>
-
-        <li>
-          <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Projects </a>
-        </li>
-
-        <li>
-          <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Blog </a>
+          <a className="text-gray-700 transition hover:text-gray-700/75" href="/catalog"> Catalog </a>
         </li>
       </ul>
     </div>
