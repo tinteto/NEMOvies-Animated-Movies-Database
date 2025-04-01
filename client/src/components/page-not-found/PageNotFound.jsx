@@ -1,4 +1,3 @@
-//TODO: change colors and eventually add image - @InsideTheMagic source for the image
 import styles from './PageNotFound.module.css'
 import { Link } from "react-router";
 

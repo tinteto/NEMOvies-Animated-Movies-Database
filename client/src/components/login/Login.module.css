@@ -1,13 +1,28 @@
 .loginContainer {
-  max-width: 40%;
+  max-width: 35%;
   margin: 0 auto;
   padding: 30px;
 }
 
-.container {
-  padding: 16px;
+.imgContainer {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 10px 0px;
+
 }
 
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; 
+  object-fit: cover; 
+}
+
+
+.dataContainer {
+  padding: 16px;
+}
 
 form {
   border: 3px solid #f1f1f1;
@@ -54,16 +69,6 @@ textarea:focus {
 
 .loginBtn:hover {
   background-color: #374151;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-img.avatar {
-  width: 60%;
-  border-radius: 50%;
 }
 
 

@@ -18,7 +18,7 @@ export default function About() {
         <div className={styles.aboutContainer}>
           <h2>Radostina Georgieva</h2>
           <p className={styles.title}>Founder</p>
-          <p className={styles.keenEye}>Just a grown-up kids' movies enthusiast!</p>
+          <p className={styles.keenEye}>Just a grown-up children's movies enthusiast!</p>
           <p className={styles.email}>radostina@example.com</p>
         </div>
       </div>

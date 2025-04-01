@@ -1,4 +1,3 @@
-//TODO: change colors
 import { Link, useNavigate } from "react-router";
 import styles from './Register.module.css'
 import { useRegister } from "../../apiHooks/authApiHooks";

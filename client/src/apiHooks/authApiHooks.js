@@ -63,6 +63,27 @@ export const useRegister = () => {
 }
 
 
+// useUserProfile - onMount
+export const useUserProfile = () => {
+    const [userProfile, setUserProfile] = useState({});
+    const { accessToken } = useContext(UserContext);
+
+    useEffect(() => {
+      fetch(`${apiUrl}/users/me`, {
+            method: 'GET',
+            headers: {
+            'X-Authorization': accessToken,
+            }
+        })
+        .then(response => response.json())
+        .then(result => {
+            setUserProfile(result)
+        })
+    }, [accessToken]);
+
+    return { userProfile };
+}
+
 
 
 //useLogout - on Mount
@@ -89,25 +110,6 @@ export const useLogout = () => {
 
 
 
-// useUserProfile - onMount
-export const useUserProfile = () => {
-    const [userProfile, setUserProfile] = useState({});
-    const { accessToken } = useContext(UserContext);
 
-    useEffect(() => {
-      fetch(`${apiUrl}/users/me`, {
-            method: 'GET',
-            headers: {
-            'X-Authorization': accessToken,
-            }
-        })
-        .then(response => response.json())
-        .then(result => {
-            setUserProfile(result)
-        })
-    }, [accessToken]);
-
-    return { userProfile };
-}
 
 

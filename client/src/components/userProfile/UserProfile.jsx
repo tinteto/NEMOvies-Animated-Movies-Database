@@ -1,3 +1,4 @@
+//TODO noMovies
 import styles from './UserProfile.module.css'
 import { useContext } from 'react'
 import { UserContext } from '../../contexts/userContext'
@@ -16,28 +17,24 @@ const { _id: userId, username } = useContext(UserContext);
 
 <section className={styles.profileContainer}>
     <div className={styles.profileCard}>
-        <img src="\images\bastien-nvs-Lmd-CpZOGWc-unsplash.jpg" alt="ProfilePicture" />
+    <img src="\images\baby+fish.jpg" alt="ProfilePicture" />
     <div className={styles.userDetails}>
-      <div className={styles.userName}>
         <p>My username:</p>
         <h2>{userProfile.username}</h2>
-        </div>
-        <div className={styles.userEmail}>
         <p>My contact information:</p>
         <h3>{userProfile.email}</h3>
-       </div>
-      </div>
+    </div>
     </div>
 </section>
 
 <section className={styles.userCatalogPage}>
-    <h1>My Uploaded Movies </h1>
+    <h1>My Uploaded Movies</h1>
     <div className={styles.movies}>
     {userMovies.map(userMovie => <MovieCatalogItem key={userId} {...userMovie} />)}
     </div>
 
    <div className={styles.noMovies}>
-    {userMovies.length === 0 && <h3 className={styles.noMovies}>No Adventures Yet</h3>}
+    {userMovies.length === 0 && <h3 className={styles.noMovies}>No Movies yet!</h3>}
    </div>
 
 </section>

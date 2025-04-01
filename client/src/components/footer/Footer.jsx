@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 
-//TODO edit
 export default function Footer() {
     return (
         <>

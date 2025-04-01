@@ -47,6 +47,7 @@ export const useAllMovies = () => {
   return { movies };
 };
 
+
 //useRecentMovies - onMount - advanced retieval - sorting and selecting properties
 export const useLatestMovies = () => {
     const [latestMovies, setLatest] = useState([]);
@@ -70,25 +71,13 @@ return { latestMovies };
 
 }
 
-export const useUserMovies = () => {
-const [userMovies, setUserMovies] = useState([]);
-const { _id: userId } = useContext(UserContext);
-useEffect(() => {
-fetch(`http://localhost:3030/data/movies?where=_ownerId%3D%22${userId}%22`)
-.then(response => response.json())
-.then(result => 
-    setUserMovies(result)
-)
-}, []);
-
-return { userMovies };
-}
-
-
-//useOneMovie - onMount
+//useOneMovie, load comments - onMount
 export const useOneMovie = (movieId) => {
 const [movie, setMovie] = useState({});
+const [allComments, setAllComments] = useState([]);
 
+
+//oneMovie
 useEffect(() => {
     fetch(`${apiUrl}/data/movies/${movieId}`)
     .then(response => response.json())
@@ -96,8 +85,43 @@ useEffect(() => {
        setMovie(result)
     })
 }, [movieId]);
+
+
+//load comments for movie
+useEffect(() => {
+    fetch(`${apiUrl}/data/comments?where=movieId%3D%22${movieId}%22`)
+    .then(response => response.json())
+    .then(result => 
+        setAllComments(result)
+    )
+
+}, [movieId]);
+
+
+//postComment - on event
+const { accessToken } = useContext(UserContext);
+
+async function postComment(movieId, commentData) {
+    const response = await fetch(`${apiUrl}/data/comments`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Authorization': accessToken,
+        },
+        body: JSON.stringify({...commentData, movieId}),
+    });
+
+    if(!response.ok) {
+        const result = await response.json();
+        throw result;
+    }
+
+    const result = await response.json();
+    return result;
+}
+
+return { movie, allComments, postComment };
     
-return { movie }
 };
 
 //useEditMovie - on Event
@@ -126,9 +150,10 @@ export const useEditMovie = () => {
         }
     return { editMovie }
 
- }
+}
 
- //useDeleteMovie - onEvent
+
+//useDeleteMovie - onEvent
 export const useDeleteMovie = () => {
     const { accessToken } = useContext(UserContext);
 
@@ -152,13 +177,24 @@ export const useDeleteMovie = () => {
 
     return { deleteMovie };
  
-   }
+}
 
 
+//useUserMovies - on mount
+export const useUserMovies = () => {
+    const [userMovies, setUserMovies] = useState([]);
+    const { _id: userId } = useContext(UserContext);
+    useEffect(() => {
+    fetch(`http://localhost:3030/data/movies?where=_ownerId%3D%22${userId}%22`)
+    .then(response => response.json())
+    .then(result => 
+        setUserMovies(result)
+    )
+    }, []);
+    
+    return { userMovies };
+}
 
- //! get all comments for an item
- //(`${apiUrl}/data/comments?where=itemId%3D%22${itemId}%22`)
- //!post comment for an item
- // (`${apiUrl}/data/comments`), send payload
+
  //!search items
  //(`${apiUrl}/data/items?where=name%20LIKE%20%22${query}%22`);

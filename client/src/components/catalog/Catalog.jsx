@@ -15,7 +15,7 @@ const { movies } = useAllMovies();
     </div>
 
    <div className={styles.noMovies}>
-    {movies.length === 0 && <h3 className={styles.noMovies}>No Adventures Yet</h3>}
+    {movies.length === 0 && <h3 className={styles.noMovies}>No Movies yet!</h3>}
    </div>
 
 </section>

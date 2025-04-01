@@ -1,4 +1,3 @@
-//TODO: to change Images, colors
 import styles from './Login.module.css'
 import { Link, useNavigate } from "react-router";
 import { useActionState, useContext } from "react";
@@ -39,11 +38,11 @@ return (
     <>
     <div className={styles.loginContainer}>
         <form action={loginAction}>
-          <div className={styles.imgcontainer}>
-            <img src="./../../../assets/surja-sen-das-raj-KKwyJpbJyf8-unsplash.jpg" alt="Avatar" className="avatar"/>
+          <div className={styles.imgContainer}>
+            <img src="\images\07ff8e314e2798d32bfc8c39f82a9601677de34c.jpeg" alt="Avatar" className={styles.avatar}/>
           </div>
   
-          <div className={styles.container}>
+          <div className={styles.dataContainer}>
                <label htmlFor="email"><b>Email</b></label>
                <input type="text" placeholder="Enter Email" name="email" />
 
