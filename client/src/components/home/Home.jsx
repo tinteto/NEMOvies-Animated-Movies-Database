@@ -1,4 +1,3 @@
-//TODO Welcome
 import styles from './Home.module.css'
 import { Link } from "react-router"
 import { useLatestMovies } from "../../apiHooks/movieApiHooks"

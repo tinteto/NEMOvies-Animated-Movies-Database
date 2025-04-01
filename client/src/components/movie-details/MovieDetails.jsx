@@ -1,4 +1,4 @@
-//TODO Edit details
+//TODO Edit details information, comments section
 import styles from './MovieDetails.module.css';
 import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router';
