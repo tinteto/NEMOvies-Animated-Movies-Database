@@ -1,10 +1,13 @@
 import styles from './Home.module.css'
 import { Link } from "react-router"
 import { useLatestMovies } from "../../apiHooks/movieApiHooks"
+import { useContext } from 'react';
+import { UserContext } from '../../contexts/userContext';
 
 
 export default function Home() {
   const { latestMovies } = useLatestMovies();
+  const { email } = useContext(UserContext);
 
     return (
         <>
@@ -14,10 +17,17 @@ export default function Home() {
     <div className={styles.welcomeMsg}>
       <h1>Welcome to NEMOvies!</h1>
       <h3>Dive into the limitless world of movie adventures! Enjoy in moderation!</h3>
-          <div className="homeBtns">
-              <Link to="/login" className={styles.loginBtn}>Get started</Link>
-              <Link to="/about" className={styles.learnMoreBtn}>Learn more → </Link>
-          </div>
+      
+      {!email 
+      ?
+      <div className="homeBtns">
+      <Link to="/login" className={styles.loginBtn}>Get started</Link>
+      <Link to="/about" className={styles.learnMoreBtn}>Learn more → </Link>
+     </div>
+     : 
+      null
+      }
+         
     </div>
     <div className={styles.homeImg}>
       <img src="\images\E2bge_2XwAA7ef9.png" alt="HomeImage" />
