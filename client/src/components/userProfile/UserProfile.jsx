@@ -1,7 +1,4 @@
 import styles from './UserProfile.module.css'
-import { useContext } from 'react'
-import { UserContext } from '../../contexts/userContext'
-import { Link } from 'react-router';
 import { useUserProfile } from '../../apiHooks/authApiHooks';
 import { useUserMovies } from '../../apiHooks/movieApiHooks';
 import MovieCatalogItem from '../catalog/movieCatalogItem/MovieCatalogItem';
@@ -9,10 +6,9 @@ import MovieCatalogItem from '../catalog/movieCatalogItem/MovieCatalogItem';
 export default function UserProfile() {
 const { userProfile } = useUserProfile();
 const { userMovies } = useUserMovies();
-const { _id: userId, username } = useContext(UserContext);
 
     return (
-        <>   
+<>   
 
 <section className={styles.profileContainer}>
     <div className={styles.profileCard}>
@@ -29,7 +25,7 @@ const { _id: userId, username } = useContext(UserContext);
 <section className={styles.userCatalogPage}>
     <h1>My Uploaded Movies</h1>
     <div className={styles.movies}>
-    {userMovies.map(userMovie => <MovieCatalogItem key={userId} {...userMovie} />)}
+    {userMovies.map(userMovie => <MovieCatalogItem key={userMovie._id} {...userMovie} />)}
     </div>
 
    <div className={styles.noMovies}>
@@ -38,6 +34,6 @@ const { _id: userId, username } = useContext(UserContext);
 
 </section>
 
-        </>
+</>
     )
 }
