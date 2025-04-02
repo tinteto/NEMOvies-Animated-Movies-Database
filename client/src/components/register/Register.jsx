@@ -22,7 +22,6 @@ if(values.password !== repeatPassword) {
 
 try {
 const authData = await register(values.email, values.username, values.password);
-console.log(authData);
 
 userLoginHandler(authData); 
 

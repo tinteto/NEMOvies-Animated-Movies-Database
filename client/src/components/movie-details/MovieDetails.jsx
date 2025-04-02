@@ -64,8 +64,7 @@ export default function MovieDetails() {
 
         //server update
         const commentResult = await createComment(movieId, comment);
-        console.log(commentResult);
-          
+       
         //Local state update
         addComment({ ...commentResult, author: { email }});
         toast.success('Review created successfully!');
