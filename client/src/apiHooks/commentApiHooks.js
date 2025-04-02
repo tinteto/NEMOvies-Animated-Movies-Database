@@ -27,17 +27,12 @@ const searchParams = new URLSearchParams({
     load: `author=_ownerId:users`,
 });
 
-    fetch(`${apiUrl}?${searchParams.toString()}`, {
-        method: 'GET',
-        headers: {
-            'X-Authorization': accessToken,
-        }
-        })
+    fetch(`${apiUrl}?${searchParams.toString()}`)
     .then(response => response.json())
     .then(result => 
         dispatch({type: 'GET_ALL', payload: result}))
 
-}, [movieId, accessToken]);
+}, [movieId]);
 
 return {
     comments,

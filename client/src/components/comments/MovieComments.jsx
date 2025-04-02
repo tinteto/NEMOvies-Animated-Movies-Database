@@ -12,7 +12,7 @@ return (
     {comments.length > 0
     ? comments.map(comment => (
         <li key={comment._id} className={styles.comment} >
-          <p> {comment.author.email}: {comment.comment}</p>  
+          <p> <strong>{comment.author.email}</strong>: {comment.comment}</p>  
         </li>
     ))
 
