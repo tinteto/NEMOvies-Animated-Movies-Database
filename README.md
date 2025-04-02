@@ -30,7 +30,9 @@ Contains a collection of all movies. Each movie card contains movie name and rel
 
 d. Detailed Movie Page: 
 Each movie page contains name, release date, movie creators and actors, detailed description and image.
-All users can see a comment section. Only registered users can comment on movies. Edit and Delete buttons are visible only to the movie page creator. Each movie can be edited and deleted only by its creator.
+Edit and Delete buttons are visible only to the movie page creator. Each movie can be edited and deleted only by its creator.
+All users can see the reviews section. Only registered users can review movies. 
+
 
 e. User Profile Page: 
 Contains information about the user: name and email, as well as a collection of all movies the user has uploaded.
