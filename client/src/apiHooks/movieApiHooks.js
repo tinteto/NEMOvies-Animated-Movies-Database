@@ -74,8 +74,6 @@ return { latestMovies };
 //useOneMovie, load comments - onMount
 export const useOneMovie = (movieId) => {
 const [movie, setMovie] = useState({});
-const [allComments, setAllComments] = useState([]);
-
 
 //oneMovie
 useEffect(() => {
@@ -86,41 +84,7 @@ useEffect(() => {
     })
 }, [movieId]);
 
-
-//load comments for movie
-useEffect(() => {
-    fetch(`${apiUrl}/data/comments?where=movieId%3D%22${movieId}%22`)
-    .then(response => response.json())
-    .then(result => 
-        setAllComments(result)
-    )
-
-}, [movieId]);
-
-
-//postComment - on event
-const { accessToken } = useContext(UserContext);
-
-async function postComment(movieId, commentData) {
-    const response = await fetch(`${apiUrl}/data/comments`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-Authorization': accessToken,
-        },
-        body: JSON.stringify({...commentData, movieId}),
-    });
-
-    if(!response.ok) {
-        const result = await response.json();
-        throw result;
-    }
-
-    const result = await response.json();
-    return result;
-}
-
-return { movie, allComments, postComment };
+return { movie };
     
 };
 
