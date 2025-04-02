@@ -1632,6 +1632,17 @@
                 description: "Friendly but forgetful blue tang Dory begins a search for her long-lost parents and everyone learns a few things about the real meaning of family along the way.",
                 _createdOn: 1743602920279,
                 _id: "6d118e6b-0c84-46dc-a0ce-2a2509b10219"
+            },
+            "038aa356-5efe-491a-840e-0180d98476bc": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                title: "The Little Prince",
+                releaseDate: "2015",
+                creators: "Irena Brignull, Bob Persichetti, Antoine de Saint-Exupéry",
+                stars: "Jeff Bridges, Mackenzie Foy, Rachel McAdams",
+                img: "\\images\\The_Little_Prince_(2015_film)_poster.png",
+                description: "A little girl lives in a very grown-up world with her mother, who tries to prepare her for it. Her neighbor, the Aviator, introduces the girl to an extraordinary world where anything is possible, the world of the Little Prince.",
+                _createdOn: 1743622161263,
+                _id: "038aa356-5efe-491a-840e-0180d98476bc"
             }
     	},
     	likes: {
