@@ -14,11 +14,11 @@ export default function About() {
   <div className={styles.aboutRow}>
     <div className={styles.aboutColumn}>
       <div className={styles.aboutCard}>
-        <img src="\images\david-clode-zo9eZVVLIWk-unsplash.jpg" alt="teamMemberPhoto" />
+        <img src="\images\Elsa_from_Disney's_Frozen.png" alt="teamMemberPhoto" />
         <div className={styles.aboutContainer}>
           <h2>Radostina Georgieva</h2>
           <p className={styles.title}>Founder</p>
-          <p className={styles.keenEye}>Just a grown-up children's movies enthusiast!</p>
+          <p className={styles.keenEye}>Just a grown-up children's movie enthusiast!</p>
           <p className={styles.email}>radostina@example.com</p>
         </div>
       </div>
@@ -26,7 +26,7 @@ export default function About() {
   
     <div className={styles.aboutColumn}>
       <div className={styles.aboutCard}>
-        <img src="\images\sebastian-pena-lambarri-poly_hmhwJs-unsplash.jpg" alt="teamMemberPhoto" />
+        <img src="\images\Olaf_from_Disney's_Frozen.png" alt="teamMemberPhoto" />
         <div className={styles.aboutContainer}>
           <h2>Dimitar Georgiev</h2>
           <p className={styles.title}>Designer</p>

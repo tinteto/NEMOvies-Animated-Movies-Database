@@ -39,7 +39,7 @@ return (
     <div className={styles.loginContainer}>
         <form action={loginAction}>
           <div className={styles.imgContainer}>
-            <img src="\images\07ff8e314e2798d32bfc8c39f82a9601677de34c.jpeg" alt="Avatar" className={styles.avatar}/>
+            <img src="\images\james-a-molnar-AHq2twkynao-unsplash.jpg" alt="Avatar" className={styles.avatar}/>
           </div>
   
           <div className={styles.dataContainer}>

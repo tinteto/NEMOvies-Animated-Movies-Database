@@ -20,7 +20,7 @@ export default function Home() {
           </div>
     </div>
     <div className={styles.homeImg}>
-      <img src="\images\brian-mcgowan-zmkZWG6r4dw-unsplash.jpg" alt="HomeImage" />
+      <img src="\images\E2bge_2XwAA7ef9.png" alt="HomeImage" />
     </div>
     </div> 
 

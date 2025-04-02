@@ -1,4 +1,3 @@
-//TODO noMovies
 import styles from './UserProfile.module.css'
 import { useContext } from 'react'
 import { UserContext } from '../../contexts/userContext'
@@ -17,7 +16,7 @@ const { _id: userId, username } = useContext(UserContext);
 
 <section className={styles.profileContainer}>
     <div className={styles.profileCard}>
-    <img src="\images\baby+fish.jpg" alt="ProfilePicture" />
+    <img src="\images\alison-wang-mou0S7ViElQ-unsplash.jpg" alt="ProfilePicture" />
     <div className={styles.userDetails}>
         <p>My username:</p>
         <h2>{userProfile.username}</h2>

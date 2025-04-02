@@ -1,6 +1,5 @@
-//TODO Edit details information, comments section
 import styles from './MovieDetails.module.css';
-import { useContext, useEffect, useOptimistic, useState } from 'react';
+import { useContext, useOptimistic } from 'react';
 import { Link, useNavigate, useParams } from 'react-router';
 import { UserContext } from '../../contexts/userContext';
 import { useDeleteMovie, useOneMovie } from '../../apiHooks/movieApiHooks';
@@ -77,7 +76,6 @@ export default function MovieDetails() {
     };
 
 
-
     return(
         <>
     <div className={styles.movieContainer}>
@@ -86,9 +84,9 @@ export default function MovieDetails() {
             <div className={styles.text}>
                 <h1>{movie.title}</h1>
                 <h4 className={styles.date}>Release Date: {movie.releaseDate}</h4>
-                <h2>Creators: {movie.creators}</h2>
-                <h2>Stars: {movie.stars}</h2>
-                <p>{movie.description}</p>
+                <p><strong>Creators:</strong> {movie.creators}</p>
+                <p><strong>Stars:</strong> {movie.stars}</p>
+                <p className={styles.description}>{movie.description}</p>
                
                 <div className={styles.btnContainer}>
                     {userId === movie._ownerId
@@ -107,14 +105,18 @@ export default function MovieDetails() {
             </div>
         </div>
     </div>
-
-<MovieComments  comments={optimisticComments}/>
+    
+<div className={styles.commentsSection}>
 
 <CreateComment 
 email={email}
 movieId={movieId}
 onCreate={onCreateCommentHandler}
 />
+
+<MovieComments  comments={optimisticComments}/>
+
+</div>
 </>
     )
 }
