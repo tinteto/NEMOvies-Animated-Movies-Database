@@ -1,4 +1,4 @@
-/*! Register Form  box-sizing*/
+
 .registerContainer {
   max-width: 35%;
   margin: 0 auto;
@@ -81,7 +81,7 @@ p.signInHere a {
   color: #fb923c;
 }
 
-/* Change styles for signup button on extra small screens */
+
 @media screen and (max-width: 300px) {
   .signupbtn {
     width: 100%;

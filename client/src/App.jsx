@@ -28,15 +28,14 @@ function App() {
 const [authData, setAuthData] = usePersistedState('auth',{}); //stateKey
 
 const userLoginHandler = (authDataResult) => {
-  setAuthData(authDataResult); //запазваме във стейтa информацията за user-a, която ни връща сървъра
+  setAuthData(authDataResult); 
 }
 
 const userLogoutHandler = () => {
-  setAuthData({}); //initial data = {}, зачистваме state-a
+  setAuthData({}); 
 }
 
 
-//{...authData} спредваме данните, за да имаме директен достъп до всички пропъртита и изпращаме надолу по дървото и loginHandler-a
   return (
 <UserContext.Provider value={{...authData, userLoginHandler, userLogoutHandler}}> 
 <>

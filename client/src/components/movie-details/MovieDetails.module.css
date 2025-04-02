@@ -1,4 +1,4 @@
-/* Movie Container */
+
   .movieContainer {
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@
     max-width: 90%;
   }
 
-  /* Movie Details Section */
+ 
   .movieDetails {
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@
     flex-wrap: wrap;
   }
   
-  /* Movie Poster Image */
+
   .movieDetails img {
     width: 250px;
     height: 375px;
@@ -70,14 +70,14 @@
   }
   
   
-  /* Button Container */
+
   .btnContainer {
     display: flex;
     margin-top: 20px;
     gap: 10px;
   }
   
-  /* Buttons */
+  
   .btnEdit, .btnDelete {
     padding: 10px 20px;
     font-size: 1rem;

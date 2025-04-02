@@ -8,4 +8,3 @@ export default function Logout() {
     : null;
 }
 
-//return null - компонента няма да показва нищо на екрана

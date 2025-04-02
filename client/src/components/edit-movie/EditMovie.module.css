@@ -70,7 +70,7 @@ textarea:focus {
   background-color: #fb923c;
 }
 
-/* Mobile responsiveness: adjusting layout for small screens */
+
 @media screen and (max-width: 768px) {
   .container {
     width: 90%;

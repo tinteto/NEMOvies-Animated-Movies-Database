@@ -12,7 +12,6 @@ const { editMovie } = useEditMovie();
 
 
 const onFormEdit = async (formData) => {
-    //при попълване на ъпдейтнатите данни ги вземаме и ги пращаме на сървъра
     const movieData = Object.fromEntries(formData);
 
 if( movieData.title === '' || 

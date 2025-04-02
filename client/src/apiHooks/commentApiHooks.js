@@ -18,7 +18,6 @@ function commentsReducer(state, action) {
 //get comments for movie - onMount
 export const useComments = (movieId) => {
     const { accessToken } = useContext(UserContext);
-    // const [comments, setComments] = useState([]);
     const [comments, dispatch] = useReducer(commentsReducer, []);
 
 

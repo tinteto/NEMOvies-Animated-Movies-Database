@@ -9,7 +9,7 @@ export default function CreateMovie() {
 const redirectTo = useNavigate();
 const { createMovie } = useCreateMovie();
 
-//взимаме данните от формата чрез formData и подаваме фунцията onSubmit на формата
+
 const onSubmit = async (formData) => {
 const movieData = Object.fromEntries(formData);
 
@@ -29,7 +29,7 @@ toast.success('Movie created successfully!');
 redirectTo('/catalog');
 
 } catch (error) {
-toast.error(error.message); //грешката, която идва от сървъра
+toast.error(error.message); 
 }
 };
 

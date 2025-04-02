@@ -158,7 +158,3 @@ export const useUserMovies = () => {
     
     return { userMovies };
 }
-
-
- //!search items
- //(`${apiUrl}/data/items?where=name%20LIKE%20%22${query}%22`);

@@ -24,7 +24,7 @@ try {
 const authData = await register(values.email, values.username, values.password);
 console.log(authData);
 
-userLoginHandler(authData); //запазваме данните за user-a във state-a
+userLoginHandler(authData); 
 
 toast.success('Successful register!');
 

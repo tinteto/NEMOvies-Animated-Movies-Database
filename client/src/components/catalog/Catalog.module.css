@@ -14,7 +14,7 @@
   border-left: 5px solid #fb923c;
 }
 
-/* Movie Cards Layout */
+
 .movies {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -23,8 +23,6 @@
 }
 
 
-
-/* No Movies Section */
 .noMovies {
   margin-top: 30px;
   font-size: 1.5rem;
