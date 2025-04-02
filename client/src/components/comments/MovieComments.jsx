@@ -1,20 +1,22 @@
+import styles from './MovieComments.module.css'
+
 export default function MovieComments ( { comments }) {
-console.log(comments);
+
 
 return (
 <>
-<div className="commentsSection">
-<h4>User Reviews</h4>
+<div className={styles.commentsShow}>
+<h4>User Reviews: {comments.length}</h4>
 
 <ul>
     {comments.length > 0
     ? comments.map(comment => (
-        <li key={comment._id} className="comment" >
+        <li key={comment._id} className={styles.comment} >
           <p> {comment.author.email}: {comment.comment}</p>  
         </li>
     ))
 
-    : <p className="noComments">No reviews yet!</p>
+    : <p className={styles.noComments}>No reviews yet!</p>
     }
 </ul>
 </div>

@@ -1,0 +1,53 @@
+.addComment {
+  margin: 40px 0px;
+}
+
+
+.onToggle {
+  padding: 12px;
+  background-color: #fb923c;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+  width: 40%;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #fb923c;
+  outline: none;
+}
+
+.addcommenBtn {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #fb923c;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addcommenBtn:hover {
+  background-color: #374151;
+}
