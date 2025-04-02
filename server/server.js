@@ -1489,30 +1489,6 @@
     	orders: {
     	},
     	movies: {
-    		"1240549d-f0e0-497e-ab99-eb8f703713d7": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Black Widow",
-    			description: "Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Comes on the screens 2020.",
-    			img: "https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg",
-    			_createdOn: 1614935055353,
-    			_id: "1240549d-f0e0-497e-ab99-eb8f703713d7"
-    		},
-    		"143e5265-333e-4150-80e4-16b61de31aa0": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Wonder Woman 1984",
-    			description: "Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient artifact that grants wishes goes missing.",
-    			img: "https://pbs.twimg.com/media/ETINgKwWAAAyA4r.jpg",
-    			_createdOn: 1614935181470,
-    			_id: "143e5265-333e-4150-80e4-16b61de31aa0"
-    		},
-    		"a9bae6d8-793e-46c4-a9db-deb9e3484909": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			title: "Top Gun 2",
-    			description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
-    			img: "https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg",
-    			_createdOn: 1614935268135,
-    			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
-    		},
             "358270c0-de60-40c1-8f49-7cae143acf62": {
                 title: "The Lion King",
                 releaseDate: "1994",
@@ -1623,6 +1599,39 @@
                 description: "To everyone's surprise, including his own, Po, an overweight, clumsy panda, is chosen as protector of the Valley of Peace. His suitability will soon be tested as the valley's arch-enemy is on his way.",
                 _createdOn: 1743428574450,
                 _id: "c179e3ef-be16-4723-9ea3-71929b2d7619"
+            },
+            "8b831f10-c1bd-4922-be37-d3336c33b6a7": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                title: "How to Train Your Dragon",
+                releaseDate: "2010",
+                creators: "William Davies, Dean DeBlois, Chris Sanders",
+                stars: "Jay Baruchel, Gerard Butler, Craig Ferguson",
+                img: "\\images\\How_to_Train_Your_Dragon_Poster.jpg",
+                description: "A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed.",
+                _createdOn: 1743602628246,
+                _id: "8b831f10-c1bd-4922-be37-d3336c33b6a7"
+            },
+            "64d4017d-e61b-4a4c-852f-7adb748e39c6": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                title: "Up",
+                releaseDate: "2009",
+                creators: "Pete Docter, Bob Peterson",
+                stars: "Edward Asner, Jordan Nagai, John Ratzenberger",
+                img: "\\images\\Up_(2009_film).jpg",
+                description: "78-year-old Carl Fredricksen travels to South America in his house equipped with balloons, inadvertently taking a young stowaway.",
+                _createdOn: 1743602786605,
+                _id: "64d4017d-e61b-4a4c-852f-7adb748e39c6"
+            },
+            "6d118e6b-0c84-46dc-a0ce-2a2509b10219": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                title: "Finding Dory",
+                releaseDate: "2016",
+                creators: " Andrew Stanton, Victoria Strouse",
+                stars: "Ellen DeGeneres, Albert Brooks, Ed O'Neill",
+                img: "\\images\\Finding_Dory.jpg",
+                description: "Friendly but forgetful blue tang Dory begins a search for her long-lost parents and everyone learns a few things about the real meaning of family along the way.",
+                _createdOn: 1743602920279,
+                _id: "6d118e6b-0c84-46dc-a0ce-2a2509b10219"
             }
     	},
     	likes: {
