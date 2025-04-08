@@ -1,15 +1,17 @@
 import styles from './EditMovie.module.css'
 
-import { Link, useNavigate, useParams } from 'react-router'
+import { Link, Navigate, useNavigate, useParams } from 'react-router'
 import { useEditMovie, useOneMovie } from '../../apiHooks/movieApiHooks'
 import { toast } from 'react-toastify';
+import { useContext } from 'react';
+import { UserContext } from '../../contexts/userContext';
 
 export default function EditMovie() {
 const redirectTo = useNavigate();
 const { movieId } = useParams();
 const { movie } = useOneMovie(movieId);
 const { editMovie } = useEditMovie();
-
+const { _id: userId } = useContext(UserContext);
 
 const onFormEdit = async (formData) => {
     const movieData = Object.fromEntries(formData);
@@ -35,6 +37,9 @@ try {
 }
 };
 
+if (userId !== movie._ownerId) {
+    return <Navigate to="/catalog" />
+}
 
 return(
 <>
