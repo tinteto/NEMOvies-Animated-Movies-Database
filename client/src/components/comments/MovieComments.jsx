@@ -1,3 +1,4 @@
+//todo add pending
 import styles from './MovieComments.module.css'
 
 export default function MovieComments ( { comments }) {
@@ -11,7 +12,7 @@ return (
 <ul>
     {comments.length > 0
     ? comments.map(comment => (
-        <li key={comment._id} className={styles.comment} >
+        <li key={comment._id} className={styles.comment} style={{ backgroundColor: comment.pending ? 'orange' : ''}} >
           <p> <strong>{comment.author.email}</strong>: {comment.comment}</p>  
         </li>
     ))
