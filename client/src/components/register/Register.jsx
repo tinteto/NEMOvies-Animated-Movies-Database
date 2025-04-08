@@ -1,3 +1,4 @@
+//toDo - add register validations
 import { Link, useNavigate } from "react-router";
 import styles from './Register.module.css'
 import { useRegister } from "../../apiHooks/authApiHooks";
@@ -14,10 +15,14 @@ const registerHandler = async (previousState, formData) => {
 const values = Object.fromEntries(formData);
 const repeatPassword = formData.get('password-repeat');
 
+if(values.username === "") {
+toast.warning('Missing fields!');
+return;
+}
 
 if(values.password !== repeatPassword) {
-    toast.warning('Password and Repeat Password do not match!');
-    return;  
+toast.warning('Password and Repeat Password do not match!');
+return;  
 }
 
 try {
