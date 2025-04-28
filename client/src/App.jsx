@@ -20,6 +20,7 @@ import Logout from './components/logout/Logout'
 import PageNotFound from './components/page-not-found/PageNotFound'
 import AuthGuard from './components/guards/authGuard'
 import UserGuard from './components/guards/userGuard'
+import Search from './components/search/Search'
 
 
 
@@ -44,6 +45,7 @@ const userLogoutHandler = () => {
 <main>
 <Routes>
   <Route path="/" element={<Home />} />
+  <Route path="/search-movies" element={<Search />} />
   <Route path="/catalog" element={<Catalog />} />
   <Route path="/catalog/:movieId/details" element={<MovieDetails />} />
   <Route path="/about" element={<About />} />

@@ -30,6 +30,9 @@ export default function Header() {
           <li>
             <Link className="text-gray-500 transition hover:text-gray-500/75" to="/catalog"> Movie Catalog </Link>
           </li>
+          <li>
+            <Link className="text-gray-500 transition hover:text-gray-500/75" to="/search-movies"> Search Movies </Link>
+          </li>
 
 {email && (
       <li>
