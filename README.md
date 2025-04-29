@@ -16,7 +16,7 @@ On http://localhost:3003/ access the application.
 
 a. Homepage: 
 Navigation Bar: 
-Contains links to Home, Movie Catalog, Add Movie, About . 
+Contains links to Home, Movie Catalog, Add Movie, About and Search pages. 
 Login and Register visible for guest users. 
 Add Movie, User's profile and Logout visible for registered users. 
 Welcome page: 
@@ -27,6 +27,7 @@ Only registered users can create movies.
 
 c. Movie Catalog: 
 Contains a collection of all movies. Each movie card contains movie name and release date, image, and a link to its detailed page. 
+Pagination implemented.
 
 d. Detailed Movie Page: 
 Each movie page contains name, release date, movie creators and actors, detailed description and image.
