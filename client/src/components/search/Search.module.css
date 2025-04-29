@@ -10,3 +10,8 @@ font-family: Helvetica;
 font-weight: bold;
 color: #fb923c;
 }
+
+div.searchMovies ul li {
+    font-size: 30px;
+    color: #666;
+}
