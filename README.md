@@ -1,9 +1,11 @@
-# My-React-Project
+# NEMOvies_Animated-Movies-Database
+
 React Project, part of the SoftUni React Course Project Defence
 
-# My React Project - SoftUni Project Defence
+# NEMOvies_Animated-Movies-Database
+ - SoftUni Project Defence
 
-My-React-Project
+NEMOvies_Animated-Movies-Database
 Softuni Exam, React project, April 2025
 1.	Application Name: NEMOvies – Children’s Animated Movies Database
 2.	Frameworks, Libraries and Technologies Used: React, SoftUni Practice Server.
