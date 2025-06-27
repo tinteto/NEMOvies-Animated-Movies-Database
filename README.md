@@ -1,4 +1,4 @@
-# NEMOvies_Animated-Movies-Database
+# NEMOvies-Animated-Movies-Database
 
 React Project, part of the SoftUni React Course Project Defence, April 2025
 
