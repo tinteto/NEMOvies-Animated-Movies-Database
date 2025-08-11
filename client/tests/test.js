@@ -57,5 +57,13 @@ describe('Homepage', function() {
       
     });
 
+    it('shoud show sub-title message', async() => {
+        await page.goto(host);
+        await page.waitForSelector('h3');
+
+        const subtitleContent = await page.textContent('h3');
+        expect(subtitleContent).to.include('Dive into the limitless world of movie adventures! Enjoy in moderation!');
+    
+    })
 }
 )
