@@ -1,10 +1,7 @@
-# My-React-Project
-React Project, part of the SoftUni React Course Project Defence
+# NEMOvies-Animated-Movies-Database
 
-# My React Project - SoftUni Project Defence
+React Project, part of the SoftUni React Course Project Defence, April 2025
 
-My-React-Project
-Softuni Exam, React project, April 2025
 1.	Application Name: NEMOvies – Children’s Animated Movies Database
 2.	Frameworks, Libraries and Technologies Used: React, SoftUni Practice Server.
 3.	How to use the SofUni Practice Server: https://github.com/softuni-practice-server/softuni-practice-server. To run the server: In the terminal navigate to the server directory and run ‘node server.js’ command.
