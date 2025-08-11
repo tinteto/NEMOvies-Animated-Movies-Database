@@ -50,6 +50,9 @@ Only registered users can access Edit Movie page. Non-users are redirected to Lo
 Only registered users can access User’s Profile page. Non-users are redirected to 404 page.
 Not logged-in users cannot access logout, they are redirected to Login page.
 
+j. Tests:
+In the terminal navigate to the project directory: cd client, and run the command 'npm run test' in order to run the tests.
+
 
 Regards, Radostina Georgieva
 

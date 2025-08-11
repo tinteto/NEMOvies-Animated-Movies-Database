@@ -57,7 +57,7 @@ describe('Homepage', function() {
       
     });
 
-    it('shoud show sub-title message', async() => {
+    it('should show sub-title message', async() => {
         await page.goto(host);
         await page.waitForSelector('h3');
 
