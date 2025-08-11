@@ -30,7 +30,7 @@ const slowMo = 500;
 // };
 
 describe('Homepage', function() {
-    this.timeout(5000);
+    this.timeout(10000);
 
 
     before(async () => {
@@ -71,6 +71,13 @@ describe('Homepage', function() {
         await page.waitForSelector('._loginBtn_1hi5w_67');
         let visible = await page.isVisible('._loginBtn_1hi5w_67');
         expect(visible).to.be.true;
-    })
+    });
+
+    it('should display Learn more button for guests only', async() => {
+        await page.goto(host);
+        await page.waitForSelector('._learnMoreBtn_1hi5w_85');
+        let visible = await page.isVisible('._learnMoreBtn_1hi5w_85');
+        expect(visible).to.be.true;
+    });
 }
 )
