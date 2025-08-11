@@ -47,4 +47,15 @@ describe('Homepage', function() {
     });
 
 
+    it('should show welcome message', async() => {
+        await page.goto(host);
+        await page.waitForSelector('h1');
+   
+        const content = await page.textContent('h1');
+        expect(content).to.include('Welcome to NEMOvies!');
+
+      
+    });
+
+}
 )
