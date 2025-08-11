@@ -34,7 +34,7 @@ describe('Homepage', function() {
 
 
     before(async () => {
-        browser = await chromium.launch({ headless : false, slowMo });
+        browser = await chromium.launch({ headless : true, slowMo });
     });
     after(async () => {
         await browser.close();
@@ -64,6 +64,13 @@ describe('Homepage', function() {
         const subtitleContent = await page.textContent('h3');
         expect(subtitleContent).to.include('Dive into the limitless world of movie adventures! Enjoy in moderation!');
     
+    });
+
+    it('should display Get Started button for guests only', async() => {
+        await page.goto(host);
+        await page.waitForSelector('._loginBtn_1hi5w_67');
+        let visible = await page.isVisible('._loginBtn_1hi5w_67');
+        expect(visible).to.be.true;
     })
 }
 )
