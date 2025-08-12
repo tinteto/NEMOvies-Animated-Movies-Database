@@ -87,5 +87,14 @@ describe('Homepage', function() {
         const h1Content = await page.textContent('._latest_1hi5w_139 h1');
         expect(h1Content).to.include('Latest Movies');
     });
+
+    it('it should display No Movies Yet! when catalog is empty', async() => {
+        await page.goto(host);
+
+        await page.waitForSelector('h3.noMovies');
+        const emptyCatalog = await page.textContent('h3.noMovies');
+        expect(emptyCatalog).to.include('No movies yet!');
+
+    })
 }
 )
