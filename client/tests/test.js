@@ -46,12 +46,33 @@ describe('Homepage', function() {
         await page.close();
     });
 
-    it.only('should show application name', async() => {
+    it('should show application name', async() => {
         await page.goto(host);
         await page.waitForSelector('#appName');
         const visible = await page.isVisible('#appName');
         expect(visible).to.be.true;
-    })
+    });
+
+    it.only('should show Home in the header section', async() => {
+        await page.goto(host);
+        await page.waitForSelector('#home');
+        const visible = await page.isVisible('#home');
+        expect(visible).to.be.true;
+    });
+
+    it.only('should show Movie Catalog in the header section', async() => {
+        await page.goto(host);
+        await page.waitForSelector('#catalog');
+        const visible = await page.isVisible('#catalog');
+        expect(visible).to.be.true;
+    });
+
+    it.only('should show Search Movies in the header section', async() => {
+        await page.goto(host);
+        await page.waitForSelector('#search');
+        const visible = await page.isVisible('#search');
+        expect(visible).to.be.true;
+    });
 
 
     it('should show welcome message', async() => {
