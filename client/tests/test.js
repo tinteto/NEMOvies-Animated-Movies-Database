@@ -80,6 +80,14 @@ describe('Homepage', function() {
         expect(visible).to.be.true;
     });
 
+    it('should display homepage image', async() => {
+        await page.goto(host);
+
+        await page.waitForSelector('._homeImg_1hi5w_101');
+        let visible = await page.isVisible('._homeImg_1hi5w_101');
+        expect(visible).to.be.true;
+    })
+
     it('should display Latest Movies text', async() => {
         await page.goto(host);
 
