@@ -74,6 +74,13 @@ describe('Homepage', function() {
         expect(visible).to.be.true;
     });
 
+    it.only('should show About in the header section', async() => {
+        await page.goto(host);
+        await page.waitForSelector('#about');
+        const visible = await page.isVisible('#about');
+        expect(visible).to.be.true;
+    });
+
 
     it('should show welcome message', async() => {
         await page.goto(host);
