@@ -79,5 +79,13 @@ describe('Homepage', function() {
         let visible = await page.isVisible('._learnMoreBtn_1hi5w_85');
         expect(visible).to.be.true;
     });
+
+    it('should display Latest Movies text', async() => {
+        await page.goto(host);
+
+        await page.waitForSelector('._latest_1hi5w_139 h1');
+        const h1Content = await page.textContent('._latest_1hi5w_139 h1');
+        expect(h1Content).to.include('Latest Movies');
+    });
 }
 )
