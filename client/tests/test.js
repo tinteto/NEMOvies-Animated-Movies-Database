@@ -46,6 +46,13 @@ describe('Homepage', function() {
         await page.close();
     });
 
+    it.only('should show application name', async() => {
+        await page.goto(host);
+        await page.waitForSelector('#appName');
+        const visible = await page.isVisible('#appName');
+        expect(visible).to.be.true;
+    })
+
 
     it('should show welcome message', async() => {
         await page.goto(host);
