@@ -88,6 +88,16 @@ describe('Homepage', function() {
         expect(h1Content).to.include('Latest Movies');
     });
 
+    it('it should show movie list when available', async() => {
+        await page.goto(host);
+
+       await page.waitForSelector('._homePage_1hi5w_161 div');
+
+       const movies = await page.$$('._homePage_1hi5w_161 div');
+       expect(movies.length).to.be.above(0);
+        
+    });
+
     it('it should display No Movies Yet! when catalog is empty', async() => {
         await page.goto(host);
 
@@ -95,6 +105,6 @@ describe('Homepage', function() {
         const emptyCatalog = await page.textContent('h3.noMovies');
         expect(emptyCatalog).to.include('No movies yet!');
 
-    })
+    });
 }
 )
