@@ -53,31 +53,45 @@ describe('Homepage', function() {
         expect(visible).to.be.true;
     });
 
-    it.only('should show Home in the header section', async() => {
+    it('should show Home in the header section', async() => {
         await page.goto(host);
         await page.waitForSelector('#home');
         const visible = await page.isVisible('#home');
         expect(visible).to.be.true;
     });
 
-    it.only('should show Movie Catalog in the header section', async() => {
+    it('should show Movie Catalog in the header section', async() => {
         await page.goto(host);
         await page.waitForSelector('#catalog');
         const visible = await page.isVisible('#catalog');
         expect(visible).to.be.true;
     });
 
-    it.only('should show Search Movies in the header section', async() => {
+    it('should show Search Movies in the header section', async() => {
         await page.goto(host);
         await page.waitForSelector('#search');
         const visible = await page.isVisible('#search');
         expect(visible).to.be.true;
     });
 
-    it.only('should show About in the header section', async() => {
+    it('should show About in the header section', async() => {
         await page.goto(host);
         await page.waitForSelector('#about');
         const visible = await page.isVisible('#about');
+        expect(visible).to.be.true;
+    });
+
+    it('should show Login in the header section for not logged-in users', async() => {
+        await page.goto(host);
+        await page.waitForSelector('#login');
+        const visible = await page.isVisible('#login');
+        expect(visible).to.be.true;
+    });
+
+    it('should show Register in the header section for not logged-in users', async() => {
+        await page.goto(host);
+        await page.waitForSelector('#register');
+        const visible = await page.isVisible('#register');
         expect(visible).to.be.true;
     });
 
